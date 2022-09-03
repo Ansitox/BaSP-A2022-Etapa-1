@@ -131,7 +131,9 @@
                         Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                         tempus aliquam.
                     </p>
-                    <a href="" class="button2">More</a>
+                    <div class="container"><!--ni idea, no funciona-->
+                        <a href="" class="button2">More</a>
+                    </div>
                 </article>
                 <article>
                     <img src="img/img2.jpg" alt="tracebility image">
@@ -164,33 +166,37 @@
                     <a href="" class="button2">More</a>
                 </article>
             </section>
-            <section>
+            <section class="block" id="block4">
                 <h2>Request system information</h2>
                 <form>
                     <fieldset name="Personal data">
-                        <label for="name">Name</label>
-                        <input type="text" placeholder="Your name here" required id="name">
-                        <label for="email">Email</label>
-                        <input type="text" placeholder="Your email here" required id="email-box">
+                        <div id="personal-data">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder=" Your name here" required id="name">
+                            <label for="email">Email</label>
+                            <input type="text" placeholder=" Your email here" required id="email-box">
+                        </div>
+                        <div id="contact-area">
+                            <label for="radios">Contact area</label>
+                            <div id="radios">
+                                <input type="radio" value="Human resources" name="contact-area" id="ca1">
+                                <label for="ca1">Human resources</label>
+                                <input type="radio" value="Systems" name="contact-area" id="ca2">
+                                <label for="ca2">Systems</label>
+                                <input type="radio" value="Comercial" name="contact-area" id="ca3">
+                                <label for="ca3">Comercial</label>
+                            </div>
+                        </div>
                     </fieldset>
-                    <div>
-                        <p>Contact area</p>
-                        <input type="radio" value="Human resources" name="contact-area" id="ca1">
-                        <label for="ca1">Human resources</label>
-                        <input type="radio" value="Systems" name="contact-area" id="ca2">
-                        <label for="ca2">Systems</label>
-                        <input type="radio" value="Comercial" name="contact-area" id="ca3">
-                        <label for="ca3">Comercial</label>
-                    </div>
-                    <div>
+                    <fieldset name="Leave a message">    
                         <label for="msg">Message</label>
-                        <textarea cols="30" rows="10" required name="msg"></textarea>
-                    </div>
-                    <a href="" class="button3">Reset</a>
-                    <a href="" class="button3">Send</a>
+                        <textarea cols="30" rows="10" required name="msg" placeholder=" Type your message"></textarea>
+                        <a href="" class="button3">Reset</a>
+                        <a href="" class="button3">Send</a>
+                    </fieldset>
                 </form>
             </section>
-            <section>
+            <section class="block" id="block5">
                 <article>
                     <h2>Our story</h2>
                     <h3>An easy syste</h3>
@@ -200,8 +206,8 @@
                         when an unknown printer took a galley of type and scrambled it to make a 
                         type specimen book.
                     </p>
-                    <img src="img2" alt="our story image">
                 </article>
+                <img src="img/img2.jpg" alt="our story image">
                 <article>
                     <h3>An easy syste</h3>
                     <p>
@@ -212,69 +218,67 @@
                     </p>
                 </article>
             </section>
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Products</th>
-                            <th>Company</th>
-                            <th>Support</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <li>
-                                    <a href="">Functionalities</a>
-                                </li>
-                                <li>
-                                    <a href="">Downloads</a>
-                                </li>
-                                <li>
-                                    <a href="">Integrations</a>
-                                </li>
-                                <li>
-                                    <a href="">Extras</a>
-                                </li>
-                            </td>
-                            <td>
-                                <li>
-                                    <a href="">About us</a>
-                                </li>
-                                <li>
-                                    <a href="">Clients</a>
-                                </li>
-                                <li>
-                                    <a href="">Resources</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog</a>
-                                </li>
-                            </td>
-                            <td>
-                                <li>
-                                    <a href="">Help</a>
-                                </li>
-                                <li>
-                                    <a href="">Tutorials</a>
-                                </li>
-                                <li>
-                                    <a href="">API</a>
-                                </li>
-                                <li>
-                                    <a href="">Contact</a>
-                                </li>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section class="block" id="block6">
+                <ul>
+                    <li>
+                        Products
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Functionalities</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Downloads</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Integrations</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Extras</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Company
+                    </li>
+                    <li class="sub-list">
+                        <a href="">About us</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Clients</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Resources</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Blog</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Support
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Help</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Tutorials</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">API</a>
+                    </li>
+                    <li class="sub-list">
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
             </section>
         </main>
         <footer>
-            <a href="" target="_blank"><img src="img/tw.png" alt="twitter logo" height="75"></a>
-            <a href="" target="_blank"><img src="img/ig.png" alt="instagramlogo" height="75"></a>
-            <a href="" target="_blank"><img src="img/in.png" alt="linkedin logo" height="75"></a>
-            <a href="" target="_blank"><img src="img/fb.png" alt="facebook logo" height="75"></a>
+            <div id="footer-logos">
+                <a href="" target="_blank"><img src="img/tw.png" alt="twitter logo" height="75"></a>
+                <a href="" target="_blank"><img src="img/ig.png" alt="instagramlogo" height="75"></a>
+                <a href="" target="_blank"><img src="img/in.png" alt="linkedin logo" height="75"></a>
+                <a href="" target="_blank"><img src="img/fb.png" alt="facebook logo" height="75"></a>
+            </div>
             <p>Rosario, Argentina</p>
             <p>Copyright &copy; 2022 Radium Rocket. All rights reserved.</p>
         </footer>

@@ -11,37 +11,36 @@ a{
 a:hover{
     color: #46A37C;
 }
-
 /* ----------------HEADER------------------ */
 header{
-    background-color: #373867;
-    border-radius: 0px 0px 15px 15px;
-    height: 116.21px;
-    width: 1512px;
     position:fixed;
     z-index: 2;
+    height: 116.21px;
+    width: 1512px;
+    background-color: #373867;
+    border-radius: 0px 0px 15px 15px;
 }
 #header-title{
-    height: 98.78px;
-    position: absolute;
+    position: relative;
     left: 58px;
     top: 11px;
+    height: 98.78px;
 }
 #header-logos{
-    position: absolute;
-    top: 32px;
-    right: 27.14px;
+    position: relative;
+    bottom: 66px;
+    left: 1273px;
 }
 /* ----------------ASIDE------------------ */
 aside{
-    background-color: #DFE4DE;
-    border-radius: 0px 0px 15px 15px;
-    width: 253px;
-    height: 509px;
     position: fixed;
     top: 109px;
     left: 22px;
     z-index: 1;
+    width: 253px;
+    height: 509px;
+    background-color: #DFE4DE;
+    border-radius: 0px 0px 15px 15px;
     color: #373867;
 }
 aside .title{
@@ -52,7 +51,7 @@ aside .title{
     text-decoration: underline;
 }
 #sb-sec1{
-    position: absolute;
+    position: relative;
     top: 49px;
     left: 29px;
 }
@@ -61,22 +60,22 @@ aside .title{
 }
 #sb-sec2 p:nth-child(2){
     width: 197px;
+    margin-bottom: 16px;
     font-size: 10px;
     font-weight: thin;
-    margin-bottom: 16px;
 }
 #sb-sec2{
-    position: absolute;
-    top: 244px;
+    position: relative;
+    top: 70px;
     left: 29px;
 }
 #sb-sec2 .title{
     margin-bottom: 10px;
 }
 aside ul{
-    list-style: none;
     padding: 0;
     line-height: 18px;
+    list-style: none;
 }
 aside li{
     margin-bottom: 18px;
@@ -92,37 +91,42 @@ address a{
     font-size: 12px;
     font-style: none;
 }
+address img{
+    display: block;
+}
 #phone{
+    position: relative;
     width: 22px;
     height: 22px;
-    position: absolute;
-    top: 112px;
 }
 #email{
+    position: relative;
+    top: 15px;
     width: 22px;
     height: 16px;
-    position: absolute;
-    top: 154.5px;
 }
 #location{
+    position: relative;
+    top: 40px;
     width: 22px;
     height: 22px;
-    position: absolute;
-    top: 199px;
+}
+address a{
+    display: block;
 }
 #a1{
-    position: absolute;
-    top: 114px;
+    position: relative;
+    bottom: 58px;
     left: 32px;
 }
 #a2{
-    position: absolute;
-    top: 152px;
+    position: relative;
+    bottom: 38px; 
     left: 32px;
 }
 #a3{
-    position: absolute;
-    top: 189px;
+    position: relative;
+    bottom: 18px;
     left: 32px;
     right: 28px;
 }
@@ -136,16 +140,13 @@ main{
 }
 .block{
     display: block;
-    width: auto;
-    padding: 70px 40px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #373867;
+    padding: 60px 40px;
+    border-bottom: #373867 solid 2px;
 }
 .block h2{
+    padding-bottom: 30px;
     font-size: 25px;
     font-weight: bold;
-    padding-bottom: 30px;
     text-transform: uppercase;
 }
 /* ----------------BLOCK-1------------------ */
@@ -153,9 +154,9 @@ main{
     height: 373px;
 }
 #block1 h1{
+    padding-bottom: 17px;
     font-size: 40px;
     font-weight: normal;
-    padding-bottom: 17px;
 }
 #trackgenix{
     font-weight: bold;
@@ -166,33 +167,29 @@ main{
     text-transform: uppercase;
 }
 #block1 p{
-    font-weight: lighter;
-    line-height: 30px;
-    display: block;
+    position: relative;
     width: 533px;
     height: 100px;
-    position: absolute;
-    top: 212px;
+    font-weight: lighter;
+    line-height: 30px;
 }
 #block1 a{
-    position: absolute;
-    top: 377px;
-    left: 488px;
+    position: relative;
+    right: 70px;
+    bottom: 190px;
 }
 #block1 img{
-    position: absolute;
+    position: relative;
+    bottom: 190px;
+    left: 650px;
     height: 332px;
-    top: 80px;
-    right: 22px;
 }
 .button1{
-    text-transform: capitalize;
-    background-color: white;
-    border-style: solid;
-    border-color: #373867;
-    border-radius: 5px;
-    border-width: 3px;
     padding: 12px 34px;
+    background-color: white;
+    border: #373867 solid 2px;
+    border-radius: 5px;
+    text-transform: capitalize;
     color: #373867;
     text-transform: uppercase;
     font-size: 15px;
@@ -206,14 +203,12 @@ main{
     height: 410px;
 }
 #block2 h3{
+    width: 250px;
+    padding: 3px;
+    border-bottom: #373867 solid 2px;
+    margin-bottom: 15px;
     font-size: 20px;
     font-weight: bold;
-    padding: 3px;
-    border-bottom-color: #373867;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    width: 250px;
-    margin-bottom: 15px;
 }
 #block2 article{
     display: inline-block;
@@ -229,9 +224,9 @@ main{
 }
 #block2 p{
     width: 237px;
+    padding-left: 13px;
     font-size: 15px;
     line-height: 15px;
-    padding-left: 13px;
     font-weight: lighter;
 }
 #block2 .image{
@@ -241,11 +236,7 @@ main{
 /* aiudaaaaa */
 #block3{
     height: 485px;
-    width: 1185px;
-}
-#block3 h3{
-    font-size: 20px;
-    font-weight: bold;
+    visibility: hidden;
 }
 #block3 article{
     display: inline-block;
@@ -260,51 +251,168 @@ main{
 }
 #block3 img{
     height: 315px;
-    width: 453px;
+    width: 451px;
     border-radius: 5px;
-    border-style: solid;
-    border-color: #373867;
-    border-width: 2px;
+    border: #373867 solid 2px;
 }
 .button2{
-    background-color: white;
-    border-style: solid;
-    border-color: #373867;
-    border-radius: 5px;
-    border-width: 3px;
     padding: 6px 16px;
+    margin:auto;
+        /* no logro centrarlo */
+    background-color: white;
+    border: #373867 solid 2px;
+    border-radius: 5px;
     color: #373867;
     text-transform: uppercase;
     font-size: 15px;
-    margin:auto;
-    /* no logro centrarlo */
 }
 .button2:hover{
     background-color: #373867;
     color: white;
 }
 /* ----------------BLOCK-4------------------ */
-
-
-
-
-
-
-
-
-
+fieldset{
+    display: inline-block;
+    width: 45%;
+    border: none;
+}
+fieldset #personal-data label{
+    display: block;
+}
+fieldset textarea{
+    display: block;
+}
+#block4{
+    height: 269px;
+}
+#block4 label{
+    padding-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#block4 input[type="text"]{
+    height: 37px;
+    width: 395px;
+    margin-bottom: 19px;
+    border-radius: 4px;
+    border: #373867 solid 1px;
+}
+#personal-data ::placeholder{
+    color: #AFAFC2;
+}
+#radios label{
+    display: inline-block;
+    padding-right: 60px;
+    font-weight: normal;
+}
+#block4 textarea{
+    position: relative;
+    bottom: 11px;
+    height: 127px;
+    width: 452px;
+    margin-top: 19px;
+    border-radius: 4px;
+    border: #373867 solid 1px;
+}
+form fieldset:last-child{
+    position: relative;
+    bottom: 24px;
+}
+fieldset ::placeholder{
+    color: #AFAFC2;
+}
 .button3{
+    position: relative;
+    left: 235px;
+    top: 25px;
+    padding-left: 35.5px;
+    padding-right: 35.5px;
     background-color: white;
-    border-style: solid;
-    border-color: #373867;
+    border: #373867 solid 2px;
     border-radius: 5px;
-    border-width: 3px;
-    padding: 3px 35.5px;
     color: #373867;
-    text-transform: uppercase;
     font-size: 15px;
 }
 .button3:hover{
     background-color: #373867;
     color: white;
 }
+/* ----------------BLOCK-5------------------ */
+#block5{
+    height: 391px;
+}
+#block5 h3{
+    padding-bottom: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+}
+#block5 img{
+    position: relative;
+    display: inline;
+    float: right;
+    height: 250px;
+    width: 377px;
+    border-radius: 5px;
+    border: #373867 solid 2px;
+}
+#block5 article{
+    float: left;
+    font-size: 20px;
+}
+#block5 article:first-child{
+    width: 708px;
+}
+/* ----------------BLOCK-6------------------ */
+#block6{
+    height: 160px;
+}
+#block6 ul{
+    display: inline-block;
+    width: 33%;
+    padding: 0;
+    font-size: 20px;
+    line-height: 33px;
+}
+#block6 ul li:first-child{
+    padding: 0px;
+    text-decoration: underline;
+    font-weight: bold;
+    list-style: none;
+}
+/* me gustaria cambiar el tamaño */
+#block6 .sub-list{
+    position: relative;
+    left: 50px;
+}
+/* ----------------FOOTER------------------ */
+footer{
+    position: relative;
+    top: 116.21px;
+    left: 278px;
+    right: 22px;
+    width: 1212px;
+    border-top: #373867 solid 4px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+footer div{
+    width: 312px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+/* no lo puedo centrar */
+footer p{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+/* Position y display
+Flexbos rules
+Box model: width, height, margin, padding...
+Background y border
+Texto: font-size etc
+otras */
