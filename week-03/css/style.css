@@ -6,7 +6,6 @@
 }
 a{
     text-decoration: none;
-    font-style: none;
 }
 a:hover{
     color: #46A37C;
@@ -29,7 +28,8 @@ header{
 #header-logos{
     position: relative;
     bottom: 66px;
-    left: 1273px;
+    right: 33px;
+    float: right;
 }
 /* ----------------ASIDE------------------ */
 aside{
@@ -41,7 +41,6 @@ aside{
     height: 509px;
     background-color: #DFE4DE;
     border-radius: 0px 0px 15px 15px;
-    color: #373867;
 }
 aside .title{
     font-weight: bold;
@@ -62,7 +61,6 @@ aside .title{
     width: 197px;
     margin-bottom: 16px;
     font-size: 10px;
-    font-weight: thin;
 }
 #sb-sec2{
     position: relative;
@@ -89,7 +87,6 @@ address p{
 address a{
     color: #9F9FB2;
     font-size: 12px;
-    font-style: none;
 }
 address img{
     display: block;
@@ -134,12 +131,11 @@ address a{
 main{
     position: relative;
     top: 116.21px;
-    left: 278px;
+    left: 288px;
     right: 22px;
-    width: 1212px;
+    width: 1202px;
 }
 .block{
-    display: block;
     padding: 60px 40px;
     border-bottom: #373867 solid 2px;
 }
@@ -189,7 +185,6 @@ main{
     background-color: white;
     border: #373867 solid 2px;
     border-radius: 5px;
-    text-transform: capitalize;
     color: #373867;
     text-transform: uppercase;
     font-size: 15px;
@@ -235,19 +230,21 @@ main{
 /* ----------------BLOCK-3------------------ */
 /* aiudaaaaa */
 #block3{
-    height: 485px;
-    visibility: hidden;
+    height: 535px;
+    /* visibility: hidden; */
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 #block3 article{
     display: inline-block;
-    width: 453px;
     padding-bottom: 86px;
+    padding-right: 100px;
 }
 #block3 p{
-    width: 451px;
-    font-size: 15px;
-    line-height: 15px;
-    font-weight: lighter;
+    width: 453px;
+    height: 75px;
+    white-space: normal;
 }
 #block3 img{
     height: 315px;
@@ -256,8 +253,9 @@ main{
     border: #373867 solid 2px;
 }
 .button2{
+    position: relative;
     padding: 6px 16px;
-    margin:auto;
+    margin: 189px;
         /* no logro centrarlo */
     background-color: white;
     border: #373867 solid 2px;
@@ -389,12 +387,13 @@ fieldset ::placeholder{
 footer{
     position: relative;
     top: 116.21px;
-    left: 278px;
+    left: 288px;
     right: 22px;
-    width: 1212px;
+    width: 1202px;
     border-top: #373867 solid 4px;
     padding-top: 70px;
     padding-bottom: 30px;
+    /* visibility: hidden; */
 }
 footer div{
     width: 312px;
@@ -403,16 +402,18 @@ footer div{
 }
 /* no lo puedo centrar */
 footer p{
-    width: 100%;
+    width: 628px;
     margin: auto;
     text-align: center;
     padding-top: 7px;
     padding-bottom: 7px;
 }
 
-/* Position y display
+/* 
+Position y display
 Flexbos rules
 Box model: width, height, margin, padding...
 Background y border
 Texto: font-size etc
-otras */
+otras 
+*/
