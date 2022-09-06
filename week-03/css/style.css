@@ -14,33 +14,36 @@ a:hover{
 header{
     position:fixed;
     z-index: 2;
-    height: 116.21px;
-    width: 1512px;
+    width: 100%;
+    min-width: 760px;
+    max-height: 116.21px;
     background-color: #373867;
     border-radius: 0px 0px 15px 15px;
 }
 #header-title{
     position: relative;
-    left: 58px;
+    left: 5.16%;
     top: 11px;
     height: 98.78px;
 }
 #header-logos{
     position: relative;
     bottom: 66px;
-    right: 33px;
+    right: 2.18%;
     float: right;
 }
 /* ----------------ASIDE------------------ */
 aside{
     position: fixed;
     top: 109px;
-    left: 22px;
+    left: 1.45%;
     z-index: 1;
-    width: 253px;
-    height: 509px;
+    float: left;
+    width: 16.73%;
+    min-width: 170px;
+    min-height: 50%;
     background-color: #DFE4DE;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;     
 }
 aside .title{
     font-weight: bold;
@@ -52,20 +55,21 @@ aside .title{
 #sb-sec1{
     position: relative;
     top: 49px;
-    left: 29px;
+    width: 75%;
+    margin: auto;
 }
 #sb-sec1 .title{
     margin-bottom: 18px;
 }
 #sb-sec2 p:nth-child(2){
-    width: 197px;
     margin-bottom: 16px;
     font-size: 10px;
 }
 #sb-sec2{
     position: relative;
     top: 70px;
-    left: 29px;
+    width: 75%;
+    margin: auto;
 }
 #sb-sec2 .title{
     margin-bottom: 10px;
@@ -79,6 +83,9 @@ aside li{
     margin-bottom: 18px;
 }
 /* ----------------ADRESS------------------ */
+address{
+    width: 100%;
+}
 address p{
     color: #9F9FB2;
     font-size: 12px;
@@ -93,20 +100,14 @@ address img{
 }
 #phone{
     position: relative;
-    width: 22px;
-    height: 22px;
 }
 #email{
     position: relative;
     top: 15px;
-    width: 22px;
-    height: 16px;
 }
 #location{
     position: relative;
     top: 40px;
-    width: 22px;
-    height: 22px;
 }
 address a{
     display: block;
@@ -114,42 +115,46 @@ address a{
 #a1{
     position: relative;
     bottom: 58px;
-    left: 32px;
+    float: right;
+    width: 75%;
 }
 #a2{
     position: relative;
     bottom: 38px; 
-    left: 32px;
+    float: right;
+    width: 75%;
 }
 #a3{
     position: relative;
     bottom: 18px;
-    left: 32px;
-    right: 28px;
+    float: right;
+    width: 75%;
 }
 /* ----------------MAIN------------------ */
 main{
     position: relative;
     top: 116.21px;
-    left: 288px;
-    right: 22px;
-    width: 1202px;
+    right: 1.45%;
+    float: right;
+    width: 79.5%;
+    min-width: 590px;
 }
 .block{
-    padding: 60px 40px;
+    height: auto;
+    padding: 60px 2.65%;
     border-bottom: #373867 solid 2px;
 }
 .block h2{
     padding-bottom: 30px;
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 /* ----------------BLOCK-1------------------ */
 #block1{
-    height: 373px;
+    overflow: hidden;
+    max-height: 430px;
 }
 #block1 h1{
+    float: left;
+    width: 48.06%;
     padding-bottom: 17px;
     font-size: 40px;
     font-weight: normal;
@@ -158,27 +163,27 @@ main{
     font-weight: bold;
 }
 #block1 h2{
+    width: 48.06%;
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
 }
 #block1 p{
     position: relative;
-    width: 533px;
-    height: 100px;
+    float: left;
+    width: 41.66%;
     font-weight: lighter;
     line-height: 30px;
 }
-#block1 a{
-    position: relative;
-    right: 70px;
-    bottom: 190px;
-}
 #block1 img{
     position: relative;
-    bottom: 190px;
-    left: 650px;
-    height: 332px;
+    float: right;
+    bottom: 150px;
+    width: 39.35%;
+}
+#block1 a{
+    position: relative;
+    top: 170px;
 }
 .button1{
     padding: 12px 34px;
@@ -194,11 +199,8 @@ main{
     color: white;
 }
 /* ----------------BLOCK-2------------------ */
-#block2{
-    height: 410px;
-}
 #block2 h3{
-    width: 250px;
+    width: 96.2%;
     padding: 3px;
     border-bottom: #373867 solid 2px;
     margin-bottom: 15px;
@@ -215,7 +217,6 @@ main{
 }
 #block2 .txt{
     position: relative;
-    left: 20px;
 }
 #block2 p{
     width: 237px;
@@ -224,39 +225,29 @@ main{
     line-height: 15px;
     font-weight: lighter;
 }
-#block2 .image{
-    height: 75px;
-}
 /* ----------------BLOCK-3------------------ */
-/* aiudaaaaa */
 #block3{
-    height: 535px;
-    /* visibility: hidden; */
     overflow: auto;
     overflow-y: hidden;
     white-space: nowrap;
 }
 #block3 article{
+    width: 30%;
     display: inline-block;
     padding-bottom: 86px;
-    padding-right: 100px;
-}
-#block3 p{
-    width: 453px;
-    height: 75px;
-    white-space: normal;
+    padding-right: 10%;
 }
 #block3 img{
-    height: 315px;
-    width: 451px;
+    width: 100%;
     border-radius: 5px;
     border: #373867 solid 2px;
 }
 .button2{
     position: relative;
+    top: 20px;
+    left: 40%;
     padding: 6px 16px;
-    margin: 189px;
-        /* no logro centrarlo */
+    margin: auto;
     background-color: white;
     border: #373867 solid 2px;
     border-radius: 5px;
@@ -280,9 +271,6 @@ fieldset #personal-data label{
 fieldset textarea{
     display: block;
 }
-#block4{
-    height: 269px;
-}
 #block4 label{
     padding-bottom: 7px;
     font-size: 14px;
@@ -300,6 +288,7 @@ fieldset textarea{
 }
 #radios label{
     display: inline-block;
+    width: 15%;
     padding-right: 60px;
     font-weight: normal;
 }
@@ -337,7 +326,8 @@ fieldset ::placeholder{
 }
 /* ----------------BLOCK-5------------------ */
 #block5{
-    height: 391px;
+    max-height: 420px;
+    overflow: hidden;
 }
 #block5 h3{
     padding-bottom: 16px;
@@ -347,24 +337,20 @@ fieldset ::placeholder{
 }
 #block5 img{
     position: relative;
-    display: inline;
+    bottom: 150px;
     float: right;
-    height: 250px;
-    width: 377px;
+    width: 30%;
     border-radius: 5px;
     border: #373867 solid 2px;
 }
 #block5 article{
-    float: left;
+    width: 100%;
     font-size: 20px;
 }
 #block5 article:first-child{
-    width: 708px;
+    width: 70%;
 }
 /* ----------------BLOCK-6------------------ */
-#block6{
-    height: 160px;
-}
 #block6 ul{
     display: inline-block;
     width: 33%;
@@ -378,42 +364,31 @@ fieldset ::placeholder{
     font-weight: bold;
     list-style: none;
 }
-/* me gustaria cambiar el tamaño */
 #block6 .sub-list{
     position: relative;
-    left: 50px;
+    left: 10%;
 }
 /* ----------------FOOTER------------------ */
 footer{
     position: relative;
     top: 116.21px;
-    left: 288px;
-    right: 22px;
-    width: 1202px;
-    border-top: #373867 solid 4px;
+    right: 1.45%;
+    float: right;
+    width: 79.5%;
     padding-top: 70px;
     padding-bottom: 30px;
-    /* visibility: hidden; */
+    border-top: #373867 solid 4px;
 }
 footer div{
-    width: 312px;
-    margin: auto;
+    min-width: 312px;
+    width: 30%;
     padding-bottom: 60px;
-}
-/* no lo puedo centrar */
-footer p{
-    width: 628px;
     margin: auto;
-    text-align: center;
+}
+footer p{
+    width: 60%px;
+    margin: auto;
     padding-top: 7px;
     padding-bottom: 7px;
+    text-align: center;
 }
-
-/* 
-Position y display
-Flexbos rules
-Box model: width, height, margin, padding...
-Background y border
-Texto: font-size etc
-otras 
-*/
