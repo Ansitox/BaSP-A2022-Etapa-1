@@ -17,3 +17,10 @@
 ```
                     Author/s:   Adrián Da Silva
 ```
+
+## Week 03:
+> This week we used css to style our week 02 .html and give it a more faithful look to the landing page we designed on week 01.
+
+```
+                    Author/s:   Adrián Da Silva
+```
