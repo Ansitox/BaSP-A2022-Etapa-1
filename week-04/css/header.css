@@ -1,27 +1,26 @@
-header{
+#header-container {
     background-color: #373867;
     border-radius: 0 0 15px 15px;
     display: flex;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     flex-direction: column;
     align-items: center;
     z-index: 1;
 }
-#header-logos{
+
+#header-logos {
     display: none;
 }
-header #header-title{
+
+#header-title {
     width: 80%;
     margin-top: 5px;
     margin-bottom: 10px;
 }
-header button{
-    background-color: transparent;
-    border: none;
-}
-/* ver HTML */
-header #header-button{
+
+#header-button {
     width: 5%;
     margin: auto;
     margin-bottom: 5px;

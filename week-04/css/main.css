@@ -1,97 +1,122 @@
-main{
+main {
     display: flex;
     flex-direction: column;
     width: 96%;
     margin: auto;
-    /* arreglar esto */
-    position: relative;
-    top: 150px;
+    font-size: small;
 }
-section.block{
+
+section.block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3% 20px;
+    padding: 10px 20px;
     border-bottom: #373867 3px solid;
 }
-/* -----------------------BLOCK-1----------------------- */
-#block1 h1{
+
+#main-block h1 {
     text-align: center;
     margin-bottom: 10px;
+    font-weight: normal;
 }
-#block1 h2{
+
+#main-block h1 #trackgenix {
+    font-weight: bold;
+}
+
+#main-block h2 {
     align-self: center;
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    font-size: 15px;
     margin-bottom: 10px;
 }
-#block1 p{
+
+#main-block p {
     width: 90%;
     margin-bottom: 15px;
 }
-#block1 img{
+
+#main-block img {
     border-radius: 15px;
     width: 75%;
     margin-bottom: 20px;
 }
-.button1{
+
+.button1 {
     border: #373867 2px solid;
     border-radius: 5px;
     text-transform: uppercase;
     padding: 5px 12px;
 }
-.button1:hover{
+
+.button1:hover {
     background-color: #373867;
-    color: white;
+    color: #ffffff;
 }
+
 /* -----------------------BLOCK-2----------------------- */
-#block2 article{
+#services-block article {
     display: flex;
     margin-bottom: 20px;
 }
-#block2 article:nth-child(odd){
+
+#services-block article:nth-child(odd) {
     flex-direction: row-reverse;
 }
-#block2 article:nth-child(odd) img{
-    margin-left: 4%;
+
+#services-block article img {
+    max-height: 117px;
+    align-self: center;
 }
-#block2 article:nth-child(even) img{
-    margin-right: 4%;
+
+#services-block article:nth-child(odd) img {
+    margin-left: 15px;
 }
-#block2 h3{
+
+#services-block article:nth-child(even) img {
+    margin-right: 15px;
+}
+
+#services-block h3 {
     width: 100%;
     padding-bottom: 5px;
     border-bottom: #373867 1px solid;
 }
-#block2 p{
+
+#services-block p {
     width: 96%;
-    padding-left: 4%;
+    padding-left: 15px;
     padding-top: 5px;
 }
+
 /* -----------------------BLOCK-3----------------------- */
-#block3 img{
+#whytr-block img {
     display: none;
 }
-#block3 article{
+
+#whytr-block article {
     display: flex;
     padding-bottom: 10px;
     border-bottom: #373867 1px solid;
     margin-bottom: 10px;
 }
-#block3 article:last-child{
+
+#whytr-block article:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding: 0;
 }
-#block3 p{
-    margin-right: 4%;
+
+#whytr-block p {
+    margin-right: 15px;
 }
-#block3 h3{
+
+#whytr-block h3 {
     margin-bottom: 5px;
 }
-.button2{
+
+.button2 {
     padding: 6px 16px;
     margin: auto;
     background-color: white;
@@ -101,6 +126,124 @@ section.block{
     text-transform: uppercase;
     font-size: 15px;
 }
-.button2:hover{
+
+.button2:hover {
     background-color: #373867;
     color: white;
+}
+
+/* -----------------------BLOCK-4----------------------- */
+#system-info-block fieldset{
+    border: none;
+}
+
+#system-info-block fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#system-info-block form {
+    width: 100%;
+}
+
+#system-info-block input[type=text], 
+#system-info-block input[type=email],
+#system-info-block textarea {
+    border: #373867 1px solid;
+    border-radius: 5px;
+}
+
+.title-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#personal-data {
+    display: flex;
+    flex-direction: column;
+}
+
+#radios {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#radios .radio {
+    font-size: small;
+    width: 30%;
+}
+
+#radios label {
+    font-weight: normal;
+}
+
+#system-info-block .radio {
+    display: flex;
+    align-items: center;
+}
+
+#system-info-block .radio input{
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons input {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.button3{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border: #373867 solid 2px;
+    border-radius: 5px;
+    color: #373867;
+    font-size: 15px;
+}
+
+.button3:hover{
+    background-color: #373867;
+    color: white;
+}
+
+/* -----------------------BLOCK-5----------------------- */
+#story-block h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#story-block img {
+    width: 87%;
+    border-radius: 5px;
+    border: #373867 1px solid;
+    margin: 15px 0;
+}
+
+/* -----------------------BLOCK-6----------------------- */
+#lists-block {
+    align-items: flex-start;
+    padding-left: 60px;
+    font-size: large;
+}
+
+#lists-block ul li:first-child{
+    padding: 0;
+    text-decoration: underline;
+    font-weight: bold;
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+#lists-block .sub-list{
+    margin-left: 25px;
+    list-style-type: disc;
+    padding-bottom: 5px;
+}

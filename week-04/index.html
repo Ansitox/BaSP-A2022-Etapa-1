@@ -14,20 +14,20 @@
 
     </head>
     <body>
-        <header>
+        <header id="header-container">
             <img src="img/header-trackgenix.svg" alt="Trackgenix by RadiumRocket" id="header-title">
             <img src="img/triangle-button.png" alt="menu_arrow" id="header-button">
             <!-- deberia ser button? -->
             <div id="header-logos">
-                <a href="" target="_blank"><img src="img/tw-1.png" alt="twitter logo" height="50"></a>
-                <a href="" target="_blank"><img src="img/ig-1.png" alt="instagram logo" height="50"></a>
-                <a href="" target="_blank"><img src="img/in-1.png" alt="linkedin logo" height="50"></a>
-                <a href="" target="_blank"><img src="img/fb-1.png" alt="facebook logo" height="50"></a>  
+                <a href="" target="_blank"><img src="img/tw-1.png" alt="twitter logo"></a>
+                <a href="" target="_blank"><img src="img/ig-1.png" alt="instagram logo"></a>
+                <a href="" target="_blank"><img src="img/in-1.png" alt="linkedin logo"></a>
+                <a href="" target="_blank"><img src="img/fb-1.png" alt="facebook logo"></a>  
             </div>                 
         </header>
-        <aside>
+        <aside class="container">
             <section id="sb-sec1">
-                <p class="title">Menu</p>
+                <h2 class="title">Menu</h2>
                 <ul>
                     <li id="home">
                         <a href="">Home</a>
@@ -44,7 +44,7 @@
                 </ul>
             </section>
             <section id="sb-sec2">
-                <p class="title">Get in Touch</p>
+                <h2 class="title">Get in Touch</h2>
                 <p>
                     Sed varius enim lorem ullamcorper dolore aliquam aenean ornare 
                     velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam 
@@ -52,9 +52,9 @@
                     feugiat tempus aliquam.
                 </p>
                 <address>
-                    <img src="img/sb1.png" alt="phone" height="22" id="phone">
-                    <img src="img/sb2.png" alt="email" width="22" id="email">
-                    <img src="img/sb3.png" alt="location" height="22" id="location">
+                    <img src="img/sb1.png" alt="phone" id="phone">
+                    <img src="img/sb2.png" alt="email" id="email">
+                    <img src="img/sb3.png" alt="location" id="location">
                     <a href="tel:+0000000" id="a1">(000) 000-0000</a>
                     <a href="mailto:information@untitled.tld" id="a2">information@untitled.tld</a>
                     <p id="a3">
@@ -66,7 +66,7 @@
             </section>
         </aside>
         <main>
-            <section class="block" id="block1">
+            <section class="block" id="main-block">
                 <h1>
                     <span id="trackgenix">Trackgenix</span> <span>by RadiumRocket</span>
                 </h1>
@@ -76,10 +76,10 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when
                 </p>
-                <img src="img/img1.png" alt="bulb image" width="504px">
+                <img src="img/img1.png" alt="bulb image">
                 <a href="" class="button1">Learn more</a>
             </section>
-            <section class="block" id="block2">
+            <section class="block" id="services-block">
                 <h2>Services</h2>
                 <article>
                     <img src="img/sv1.png" alt="clock img" class="img">
@@ -126,7 +126,7 @@
                     </div>
                 </article>
             </section>
-            <section class="block" id="block3">
+            <section class="block" id="whytr-block">
                 <h2>Why Trackgenix?</h2>
                 <article>
                     <img src="img/img2.jpg" alt="productivity image">
@@ -177,37 +177,45 @@
                     <a href="" class="button2">More</a>
                 </article>
             </section>
-            <section class="block" id="block4">
+            <section class="block" id="system-info-block">
                 <h2>Request system information</h2>
                 <form>
-                    <fieldset name="Personal data">
+                    <fieldset name="Personal data" class="fieldset-section">
                         <div id="personal-data">
-                            <label for="name">Name</label>
+                            <label for="name" class="title-label">Name</label>
                             <input type="text" placeholder=" Your name here" required id="name">
-                            <label for="email">Email</label>
-                            <input type="text" placeholder=" Your email here" required id="email-box">
+                            <label for="email-box" class="title-label">Email</label>
+                            <input type="email" placeholder=" Your email here" required id="email-box">
                         </div>
                         <div id="contact-area">
-                            <label for="radios">Contact area</label>
+                            <h4>Contact area</h4>
                             <div id="radios">
-                                <input type="radio" value="Human resources" name="contact-area" id="ca1">
-                                <label for="ca1">Human resources</label>
-                                <input type="radio" value="Systems" name="contact-area" id="ca2">
-                                <label for="ca2">Systems</label>
-                                <input type="radio" value="Comercial" name="contact-area" id="ca3">
-                                <label for="ca3">Comercial</label>
+                                <div class="radio">
+                                    <input type="radio" value="Human resources" name="contact-area" id="ca1">
+                                    <label for="ca1">Human resources</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" value="Systems" name="contact-area" id="ca2">
+                                    <label for="ca2">Systems</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" value="Comercial" name="contact-area" id="ca3">
+                                    <label for="ca3">Comercial</label>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset name="Leave a message">    
-                        <label for="msg">Message</label>
-                        <textarea cols="30" rows="10" required name="msg" placeholder=" Type your message"></textarea>
-                        <a href="" class="button3">Reset</a>
-                        <a href="" class="button3">Send</a>
+                    <fieldset name="Leave a message" class="fieldset-section">    
+                        <label for="msg" class="title-label">Message</label>
+                        <textarea cols="30" rows="10" required name="msg" id="msg" placeholder=" Type your message"></textarea>
+                        <div class="buttons">
+                            <input type="submit" class="button3" value="Reset">
+                            <input type="submit" class="button3" value="Send">
+                        </div>
                     </fieldset>
                 </form>
             </section>
-            <section class="block" id="block5">
+            <section class="block" id="story-block">
                 <article>
                     <h2>Our story</h2>
                     <h3>An easy syste</h3>
@@ -229,7 +237,7 @@
                     </p>
                 </article>
             </section>
-            <section class="block" id="block6">
+            <section class="block" id="lists-block">
                 <ul>
                     <li>
                         Products
@@ -285,10 +293,10 @@
         </main>
         <footer>
             <div id="footer-logos">
-                <a href="" target="_blank"><img src="img/tw.png" alt="twitter logo" height="75"></a>
-                <a href="" target="_blank"><img src="img/ig.png" alt="instagramlogo" height="75"></a>
-                <a href="" target="_blank"><img src="img/in.png" alt="linkedin logo" height="75"></a>
-                <a href="" target="_blank"><img src="img/fb.png" alt="facebook logo" height="75"></a>
+                <a href="" target="_blank"><img src="img/tw.png" alt="twitter logo"></a>
+                <a href="" target="_blank"><img src="img/ig.png" alt="instagramlogo"></a>
+                <a href="" target="_blank"><img src="img/in.png" alt="linkedin logo"></a>
+                <a href="" target="_blank"><img src="img/fb.png" alt="facebook logo"></a>
             </div>
             <p>Rosario, Argentina</p>
             <p>Copyright &copy; 2022 Radium Rocket. All rights reserved.</p>
