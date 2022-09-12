@@ -10,23 +10,40 @@ footer p {
     margin-bottom: 20px;
 }
 
-#footer-logos {
+footer .logos {
     display: flex;
     width: 45%;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-#footer-logos a {
+footer .logos a {
     width: 18%;
     margin-bottom: 15px;
 }
 
-#footer-logos img {
+footer .logos img {
     width: 100%;
 }
 
 @media screen and (min-width: 480px){
+    footer .logos {
+        width: 30%;
+    }
+
+    footer .logos a {
+        width: 22%;
+        margin-bottom: 15px;
+    }
+    
+    footer .logos img {
+        width: 100%;
+    }
+
+    footer p {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 768px){

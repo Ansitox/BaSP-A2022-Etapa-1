@@ -131,7 +131,7 @@ section.whytr a.tablet {
 
 section.whytr .button2 {
     padding: 6px 16px;
-    margin: auto;
+    margin: auto 0;
     background-color: white;
     border: #373867 solid 2px;
     border-radius: 5px;
@@ -226,41 +226,53 @@ section.system-infos .button3:hover{
     color: white;
 }
 
-#story-block h3{
+section.our-story h3{
     font-weight: normal;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-#story-block img {
+section.our-story .column {
+    display: flex;
+    flex-direction: column;
+}
+
+section.our-story img {
     width: 87%;
     border-radius: 5px;
     border: #373867 1px solid;
     margin: 15px 0;
+    align-self: center;
 }
 
-#lists-block {
+section.our-story img.tablet {
+    display: none;
+}
+
+section.lists {
     align-items: flex-start;
-    padding-left: 60px;
     font-size: large;
 }
 
-#lists-block ul li:first-child{
+section.lists ul {
+    margin-left: 60px;
+}
+
+section.lists ul li:first-child{
     padding: 0;
     text-decoration: underline;
     font-weight: bold;
     list-style: none;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
-#lists-block .sub-list{
+section.lists .sub-list{
     margin-left: 25px;
     list-style-type: disc;
     padding-bottom: 5px;
 }
 
 @media screen and (min-width: 480px){
-    
     main section.main {
         flex-direction: row;
         justify-content: space-between;
@@ -282,6 +294,7 @@ section.system-infos .button3:hover{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        border-radius: 15px;
     }
 
     section.main h2 {
@@ -297,7 +310,7 @@ section.system-infos .button3:hover{
         align-self: flex-start;
     }
 
-    section.main a.mob-desk {
+    section.main a.mobile {
         display: none;
     }
 
@@ -314,14 +327,14 @@ section.system-infos .button3:hover{
 
     } 
     
-    section.services .services-col {
+    section.services .column {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
 
-    section.services .services-col article {
+    section.services .column article {
         width: 45%;
     }
 
@@ -337,13 +350,15 @@ section.system-infos .button3:hover{
     section.whytr img {
         display: block;
         width: 40%;
+        border-radius: 5px;
+        border: #373867 1px solid;
     }
 
     section.whytr a.tablet {
         display: block;
     }
 
-    section.whytr a.mob-desk {
+    section.whytr a.mobile {
         display: none;
     }
 
@@ -353,10 +368,112 @@ section.system-infos .button3:hover{
 
     section.whytr .button2 {
         width: fit-content;
+        margin-bottom: 0;
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+
+    section.whytr div.text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.whytr div.text p {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+
+    section.system-info form {
+        width: 75%;
+        margin: auto;
+    }
+
+    section.system-info .button3 {
+        padding: 0 50px;
+    }
+
+    section.our-story img.tablet,
+    section.our-story img.mobile {
+        display: block;
+        width: 25%;
+    }
+
+    section.our-story .column {
+        flex-direction: row;
+    }
+
+    section.our-story article:nth-child(2) .text {
+        margin-right: 15px;
+    }
+
+    section.our-story article:nth-child(3) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    section.our-story article:nth-child(3) .text {
+        margin-left: 15px;
+    }
+
+    section.block.lists {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section.lists ul {
+        margin-left: 0;
+        width: 30%;
     }
 }
 
 @media screen and (min-width: 768px){
+    section.main div.text {
+        width: 54%;
+    }
+
+    section.services p {
+        font-size: 17px;
+    }
+
+    section.services .column article {
+        width: 48%;
+    }
+
+    section.whytr article {
+        width: 80%;
+        margin: auto;
+    }
+
+    section.system-info form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    section.system-info .fieldset-section {
+        width: 45%;
+    }
+
+    section.system-info .contact-area {
+        margin-top: 50px;
+    }   
+    
+    section.our-story h3 {
+        font-size: 20px;
+    }
+
+    section.our-story p {
+        font-size: 20px;
+    }
+
+    section.block.lists {
+        justify-content: center;
+    }
+
+    section.lists ul{
+        width: 25%;
+    }
 }
 
 @media screen and (min-width: 1024px){

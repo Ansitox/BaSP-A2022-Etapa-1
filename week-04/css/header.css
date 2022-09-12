@@ -25,7 +25,6 @@ header .button {
 }
 
 @media screen and (min-width: 480px){
-    
     header.container {
         flex-direction: row;
     }
