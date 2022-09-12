@@ -14,11 +14,11 @@
 
     </head>
     <body>
-        <header id="header-container">
-            <img src="img/header-trackgenix.svg" alt="Trackgenix by RadiumRocket" id="header-title">
-            <img src="img/triangle-button.png" alt="menu_arrow" id="header-button">
-            <!-- deberia ser button? -->
-            <div id="header-logos">
+        <header class="container">
+            <img src="img/header-trackgenix.svg" alt="Trackgenix by RadiumRocket" class="mobile">
+            <img src="img/header-trackgenix-2.png" alt="Trackgenix by RadiumRocket" class="tablet desktop">
+            <img src="img/triangle-button.png" alt="menu_arrow" class="button">
+            <div class="logos">
                 <a href="" target="_blank"><img src="img/tw-1.png" alt="twitter logo"></a>
                 <a href="" target="_blank"><img src="img/ig-1.png" alt="instagram logo"></a>
                 <a href="" target="_blank"><img src="img/in-1.png" alt="linkedin logo"></a>
@@ -65,68 +65,76 @@
                 </address>
             </section>
         </aside>
-        <main>
-            <section class="block" id="main-block">
-                <h1>
-                    <span id="trackgenix">Trackgenix</span> <span>by RadiumRocket</span>
-                </h1>
-                <h2>An easy system to track yout team's times and projects</h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when
-                </p>
+        <main class="container">
+            <section class="block main">
+                <div class="text">
+                    <h1>
+                        <span id="trackgenix">Trackgenix</span> <span>by RadiumRocket</span>
+                    </h1>
+                    <h2>An easy system to track yout team's times and projects</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when
+                    </p>
+                    <a href="" class="button1 tablet">Learn more</a>
+                </div>
+                <a href="" class="button1 mob-desk">Learn more</a>
                 <img src="img/img1.png" alt="bulb image">
-                <a href="" class="button1">Learn more</a>
+                <div class="bulb-img"></div>
             </section>
-            <section class="block" id="services-block">
+            <section class="block services">
                 <h2>Services</h2>
-                <article>
-                    <img src="img/sv1.png" alt="clock img" class="img">
-                    <div class="txt">
-                        <h3 class="title">Hours Registry</h3>
-                        <p>
-                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-                            tempus aliquam.
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/sv2.png" alt="inbox img" class="img">
-                    <div class="txt">
-                        <h3 class="title">Reports</h3>
-                        <p>
-                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-                            tempus aliquam.
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/sv3.png" alt="network img" class="img">
-                    <div class="txt">
-                        <h3 class="title">Resources Managment</h3>
-                        <p>
-                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-                            tempus aliquam.
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/sv4.png" alt="boxes img" class="img">
-                    <div class="txt">
-                        <h3 class="title">Multiple Roles</h3>
-                        <p>
-                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-                            tempus aliquam.
-                        </p>
-                    </div>
-                </article>
+                <div class="services-col">
+                    <article>
+                        <img src="img/sv1.png" alt="clock img" class="img">
+                        <div class="txt">
+                            <h3 class="title">Hours Registry</h3>
+                            <p>
+                                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+                                tempus aliquam.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="img/sv2.png" alt="inbox img" class="img">
+                        <div class="txt">
+                            <h3 class="title">Reports</h3>
+                            <p>
+                                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+                                tempus aliquam.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="services-col">
+                    <article>
+                        <img src="img/sv3.png" alt="network img" class="img">
+                        <div class="txt">
+                            <h3 class="title">Resources Managment</h3>
+                            <p>
+                                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+                                tempus aliquam.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="img/sv4.png" alt="boxes img" class="img">
+                        <div class="txt">
+                            <h3 class="title">Multiple Roles</h3>
+                            <p>
+                                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+                                tempus aliquam.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section class="block" id="whytr-block">
+            <section class="block whytr">
                 <h2>Why Trackgenix?</h2>
                 <article>
                     <img src="img/img2.jpg" alt="productivity image">
@@ -137,8 +145,9 @@
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                             tempus aliquam.
                         </p>
+                        <a href="" class="button2 tablet">More</a>
                     </div>
-                    <a href="" class="button2">More</a>
+                    <a href="" class="button2 mob-desk">More</a>
                 </article>
                 <article>
                     <img src="img/img2.jpg" alt="tracebility image">
@@ -149,8 +158,9 @@
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                             tempus aliquam.
                         </p>
+                        <a href="" class="button2 tablet">More</a>
                     </div>
-                    <a href="" class="button2">More</a>
+                    <a href="" class="button2 mob-desk">More</a>
                 </article>
                 <article>
                     <img src="img/img2.jpg" alt="leadership iamge">
@@ -161,8 +171,9 @@
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                             tempus aliquam.
                         </p>
+                        <a href="" class="button2 tablet">More</a>
                     </div>
-                    <a href="" class="button2">More</a>
+                    <a href="" class="button2 mob-desk">More</a>
                 </article>
                 <article>
                     <img src="img/img2.jpg" alt="decision making image">
@@ -173,23 +184,24 @@
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                             tempus aliquam.
                         </p>
+                        <a href="" class="button2 tablet">More</a>
                     </div>
-                    <a href="" class="button2">More</a>
+                    <a href="" class="button2 mob-desk">More</a>
                 </article>
             </section>
-            <section class="block" id="system-info-block">
+            <section class="block system-info">
                 <h2>Request system information</h2>
                 <form>
                     <fieldset name="Personal data" class="fieldset-section">
-                        <div id="personal-data">
+                        <div class="name-email">
                             <label for="name" class="title-label">Name</label>
                             <input type="text" placeholder=" Your name here" required id="name">
                             <label for="email-box" class="title-label">Email</label>
                             <input type="email" placeholder=" Your email here" required id="email-box">
                         </div>
-                        <div id="contact-area">
+                        <div>
                             <h4>Contact area</h4>
-                            <div id="radios">
+                            <div class="radios">
                                 <div class="radio">
                                     <input type="radio" value="Human resources" name="contact-area" id="ca1">
                                     <label for="ca1">Human resources</label>
