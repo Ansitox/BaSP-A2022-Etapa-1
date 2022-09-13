@@ -3,6 +3,7 @@ aside {
     background-color: #DFE4DE;
     font-size: 20px;
     border-radius: 0 0 15px 15px;
+    min-width: 210px;
 }
 
 aside h2 {
@@ -59,8 +60,9 @@ aside .contact-data p {
 @media screen and (min-width: 1024px) {
     aside {
         display: block;
-        width: 20%;
-        margin-left: 20px;;
-        float: left;
+        height: fit-content;
+        margin-left: 20px;
+        position: sticky;
+        top: 95px;
     }
 }

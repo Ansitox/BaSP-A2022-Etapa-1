@@ -66,7 +66,13 @@ header .button {
 @media screen and (min-width: 1024px) {
     header.container {
         justify-content: space-between;
+        max-height: 95px;
     }
+
+    header img.desktop {
+        max-height: 84px;
+    }
+
     header .button {
         display: none;
     }

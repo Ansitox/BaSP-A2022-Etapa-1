@@ -24,3 +24,12 @@
 ```
                     Author/s:   Adrián Da Silva
 ```
+
+## Week 04:
+> In week 04 we replicated the work from week 03 (using css to style our .html and replicate the layout design from the firts week), this time adding flexbox to our .css. Besides we added media queries to made our webpage responsive, this queries added breakpoints so we have different layouts for mobile, tablet and desktop screens.
+
+>https://ansitox.github.io/BaSP-A2022-Etapa-1/week-04/
+
+```
+                    Author/s:   Adrián Da Silva
+```

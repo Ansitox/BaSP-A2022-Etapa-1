@@ -13,6 +13,10 @@ a:hover {
     color: #46A37C;
 }
 
+a:focus {
+    color: #46A37C;
+}
+
 ul {
     padding: 0;
 }

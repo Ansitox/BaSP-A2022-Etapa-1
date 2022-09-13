@@ -66,6 +66,11 @@ section.main .button1:hover {
     color: #ffffff;
 }
 
+section.main .button1:focus {
+    background-color: #373867;
+    color: #ffffff;
+}
+
 section.services article {
     display: flex;
     margin-bottom: 20px;
@@ -141,9 +146,14 @@ section.whytr .button2 {
     text-align: center;
 }
 
-section.whytr.button2:hover {
+section.whytr .button2:hover {
     background-color: #373867;
     color: white;
+}
+
+section.main .button2:focus {
+    background-color: #373867;
+    color: #ffffff;
 }
 
 section.system-info fieldset {
@@ -220,7 +230,7 @@ section.system-info .button3 {
     font-size: 15px;
 }
 
-section.system-infos .button3:hover {
+section.system-info .button3:hover {
     background-color: #373867;
     color: white;
 }
@@ -472,21 +482,25 @@ section.lists .sub-list{
 }
 
 @media screen and (min-width: 1024px) {
+    .not-header {
+        display: flex;
+    }
+
+
     main {
-        width: 74%;
         margin: 0 20px;
-        float: right;
     }
 
     main section.block {
         padding: 50px 20px;
     }
+
     section.main h1 {
         font-size: 46px;
     }
     section.main div.text {
-        width: 55%;
         justify-content: space-between;
+        width: 55%;
     }
 
     section.main div.text p {
@@ -496,6 +510,8 @@ section.lists .sub-list{
 
     section.main img {
         width: 40%;
+        object-fit: contain;
+        align-self: center;
     }
 
     section.main .button1 {
@@ -511,10 +527,10 @@ section.lists .sub-list{
     }
 
     section.whytr {
+        flex-direction: column;
         overflow: auto;
         overflow-y: hidden;
         white-space: nowrap;
-        flex-direction: column;
     }
 
     section.whytr h2 {
@@ -528,9 +544,9 @@ section.lists .sub-list{
 
     section.whytr article {
         flex-direction: column;
+        flex-shrink: 0;
         width: 38%;
         margin: 0;
-        flex-shrink: 0;
         margin-right: 100px;
         border-bottom: none;
     }
