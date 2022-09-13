@@ -1,6 +1,66 @@
-aside.container {
+aside {
     display: none;
+    background-color: #DFE4DE;
+    font-size: 20px;
+    border-radius: 0 0 15px 15px;
 }
 
-@media screen and (min-width: 1024px){
+aside h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+
+aside .section {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+aside .section.nav {
+    margin-bottom: 40px;
+}
+
+aside .current {
+    text-decoration: underline;
+}
+
+aside ul li{
+    margin-bottom: 30px;
+}
+
+aside .section.get-in-touch p.text {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+aside .contact-data {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+aside .contact-data img{
+    width: 10%;
+    height: auto;
+    margin-right: 15px;
+}
+
+aside .contact-data p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+
+@media screen and (min-width: 1024px) {
+    aside {
+        display: block;
+        width: 20%;
+        margin-left: 20px;;
+        float: left;
+    }
 }

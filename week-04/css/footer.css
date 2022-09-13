@@ -2,19 +2,20 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: large;
     margin: 20px 0;
+    font-size: large;
 }
 
 footer p {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 footer .logos {
     display: flex;
-    width: 45%;
     flex-wrap: nowrap;
     justify-content: space-between;
+    width: 45%;
 }
 
 footer .logos a {
@@ -26,7 +27,7 @@ footer .logos img {
     width: 100%;
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
     footer .logos {
         width: 30%;
     }
@@ -46,8 +47,17 @@ footer .logos img {
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
+    footer {
+        width: 75%;
+        margin: 0 20px;
+        float: right;
+    }
+
+    footer .logos {
+        margin-top: 40px;
+    }
 }
