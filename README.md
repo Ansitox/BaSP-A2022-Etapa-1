@@ -28,7 +28,19 @@
 ## Week 04:
 > In week 04 we replicated the work from week 03 (using css to style our .html and replicate the layout design from the firts week), this time adding flexbox to our .css. Besides we added media queries to made our webpage responsive, this queries added breakpoints so we have different layouts for mobile, tablet and desktop screens.
 
->https://ansitox.github.io/BaSP-A2022-Etapa-1/week-04/
+>[GitHub Pages: week-04/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-04/)
+
+```
+                    Author/s:   Adrián Da Silva
+```
+
+## Week 05:
+> This week we started to learn Javascript, this week's problem consists on doing some exercises to be familiarized with how to write .js files.
+> Besides the exercises we had to fix and correct last week's problem, having in consideration our tutors feedback.
+
+>[GitHub Pages: week-04/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-04/)
+
+>[GitHub Pages: week-05/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-05/)
 
 ```
                     Author/s:   Adrián Da Silva
