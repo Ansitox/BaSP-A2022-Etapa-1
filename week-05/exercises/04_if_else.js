@@ -26,7 +26,7 @@ if (randomNumber >= 0.5) {
     “Adulto mayor” entre 61 y 75 años;
     “Anciano” si es mayor a 75 años. */
 
-console.log('-----Excercise 04-a:-----');
+console.log('-----Excercise 04-b:-----');
 
 var randomAge = Math.round(100*Math.random());
 console.log('Random age: ' + randomAge);
