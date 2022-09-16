@@ -1,8 +1,8 @@
 console.log('-----Exercise 03: ARRAYS.-----');
 
 /* a- Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola 
-los meses 5 y 11 (utilizar console.log). */
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola 
+    los meses 5 y 11 (utilizar console.log). */
 
 console.log('-----Excercise 03-a:-----');
 
@@ -44,7 +44,7 @@ console.log('-----Excercise 03-e:-----');
 console.log('Inverted array: ' + months.reverse());
 
 /* f- Unir todos los elementos del array en un único string donde 
-cada mes este separado por un guión - (utilizar join). */
+    cada mes este separado por un guión - (utilizar join). */
 
 console.log('-----Excercise 03-f:-----');
 
