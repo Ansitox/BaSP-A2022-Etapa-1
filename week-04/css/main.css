@@ -24,7 +24,7 @@ section.main h1 {
     text-align: center;
 }
 
-section.main span#trackgenix {
+section.main span.bold {
     font-weight: bold;
 }
 
@@ -76,7 +76,7 @@ section.services article {
     margin-bottom: 20px;
 }
 
-section.services article:nth-child(odd) {
+section.services article:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -85,11 +85,11 @@ section.services article img {
     max-height: 117px;
 }
 
-section.services article:nth-child(odd) img {
+section.services article:nth-child(even) img {
     margin-left: 15px;
 }
 
-section.services article:nth-child(even) img {
+section.services article:nth-child(odd) img {
     margin-right: 15px;
 }
 
@@ -166,19 +166,25 @@ section.system-info fieldset {
     padding: 0;
 }
 
-section.system-info form {
-    width: 100%;
-}
-
 section.system-info input[type=text], 
 section.system-info input[type=email],
 section.system-info textarea {
     border: #373867 1px solid;
     border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+section.system-info input[type=text], 
+section.system-info input[type=email] {
+    height: 30px;
+}
+
+section.system-info textarea {
+    height: 100px;
 }
 
 section.system-info .title-label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -190,6 +196,7 @@ section.system-info .name-email {
 section.system-info .radios {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 section.system-info .radios .radio {
@@ -342,11 +349,11 @@ section.lists .sub-list{
         width: 45%;
     }
 
-    section.services article:nth-child(odd) {
+    section.services article:nth-child(even) {
         flex-direction: row;
     }
 
-    section.services article:nth-child(odd) img{
+    section.services article:nth-child(even) img{
         margin-left: 0;
         margin-right: 15px;
     }
@@ -486,6 +493,9 @@ section.lists .sub-list{
         display: flex;
     }
 
+    .not-header-r {
+        width: 79%;
+    }
 
     main {
         margin: 0 20px;
