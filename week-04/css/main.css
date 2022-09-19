@@ -6,53 +6,53 @@ main {
     font-size: small;
 }
 
-main section.block {
+.block {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
     border-bottom: #373867 3px solid;
 }
 
-section.main .text {
+.main .text {
     display: flex;
     flex-direction: column;
 }
 
-section.main h1 {
+.main h1 {
     margin-bottom: 10px;
     font-weight: normal;
     text-align: center;
 }
 
-section.main span.bold {
+.main span.bold {
     font-weight: bold;
 }
 
-section.main h2 {
+.main h2 {
     margin-bottom: 10px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
 }
 
-section.main p {
+.main p {
     width: 100%;
     margin-bottom: 15px;
     margin-right: 0;
     text-align: center;
 }
 
-section.main img {
+.main img {
     align-self: center;
     width: 75%;
     margin-bottom: 20px;
     border-radius: 15px;
 }
 
-section.main a.tablet {
+.main a.tablet {
     display: none;
 }
-section.main .button1 {
+.main .button1 {
     align-self: center;
     order: 1;
     padding: 5px 12px;
@@ -61,80 +61,80 @@ section.main .button1 {
     text-transform: uppercase;
 }
 
-section.main .button1:hover {
+.main .button1:hover {
     background-color: #373867;
     color: #ffffff;
 }
 
-section.main .button1:focus {
+.main .button1:focus {
     background-color: #373867;
     color: #ffffff;
 }
 
-section.services article {
+.services article {
     display: flex;
     margin-bottom: 20px;
 }
 
-section.services article:nth-child(even) {
+.services article:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-section.services article img {
+.services article img {
     align-self: center;
     max-height: 117px;
 }
 
-section.services article:nth-child(even) img {
+.services article:nth-child(even) img {
     margin-left: 15px;
 }
 
-section.services article:nth-child(odd) img {
+.services article:nth-child(odd) img {
     margin-right: 15px;
 }
 
-section.services h3 {
+.services h3 {
     width: 100%;
     padding-bottom: 5px;
     border-bottom: #373867 1px solid;
 }
 
-section.services p {
+.services p {
     width: 96%;
     padding-left: 15px;
     padding-top: 5px;
 }
 
-section.whytr img {
+.whytr img {
     display: none;
 }
 
-section.whytr article {
+.whytr article {
     display: flex;
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: #373867 1px solid;
 }
 
-section.whytr article:last-child {
+.whytr article:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
-section.whytr p {
+.whytr p {
     margin-right: 15px;
 }
 
-section.whytr h3 {
+.whytr h3 {
     margin-bottom: 5px;
 }
 
-section.whytr a.tablet {
+.whytr a.tablet {
     display: none;
 }
 
-section.whytr .button2 {
+.whytr .button2 {
     margin: auto 0;
     padding: 6px 16px;
     background-color: white;
@@ -146,88 +146,89 @@ section.whytr .button2 {
     text-align: center;
 }
 
-section.whytr .button2:hover {
+.whytr .button2:hover {
     background-color: #373867;
     color: white;
 }
 
-section.main .button2:focus {
+.main .button2:focus {
     background-color: #373867;
     color: #ffffff;
 }
 
-section.system-info fieldset {
+.system-info .fieldset-section {
     border: none;
-}
-
-section.system-info fieldset {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     padding: 0;
 }
 
-section.system-info input[type=text], 
-section.system-info input[type=email],
-section.system-info textarea {
+.system-info .fieldset-section:last-of-type {
+    display: flex;
+}
+
+.system-info input[type=text], 
+.system-info input[type=email],
+.system-info textarea {
     border: #373867 1px solid;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
-section.system-info input[type=text], 
-section.system-info input[type=email] {
+.system-info input[type=text], 
+.system-info input[type=email] {
     height: 30px;
 }
 
-section.system-info textarea {
+.system-info textarea {
     height: 100px;
 }
 
-section.system-info .title-label {
+.system-info .title-label {
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-section.system-info .name-email {
+.system-info .name-email {
     display: flex;
     flex-direction: column;
 }
 
-section.system-info .radios {
+.system-info .radios {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
-section.system-info .radios .radio {
+.system-info .radios .radio {
     width: 30%;
     font-size: small;
 }
 
-section.system-info .radios label {
+.system-info .radios label {
     font-weight: normal;
 }
 
-section.system-info .radio {
+.system-info .radio {
     display: flex;
     align-items: center;
 }
 
-section.system-info .radio input {
+.system-info .radio input {
     margin-right: 5px;
 }
 
-section.system-info .buttons {
+.system-info .buttons {
     display: flex;
     justify-content: flex-end;
 }
 
-section.system-info .buttons input {
+.system-info .buttons input {
     margin-left: 5px;
     margin-top: 10px;
 }
 
-section.system-info .button3 {
+.system-info .button3 {
     padding-left: 20px;
     padding-right: 20px;
     background-color: white;
@@ -237,23 +238,23 @@ section.system-info .button3 {
     font-size: 15px;
 }
 
-section.system-info .button3:hover {
+.system-info .button3:hover {
     background-color: #373867;
     color: white;
 }
 
-section.our-story h3{
+.our-story h3{
     margin-bottom: 5px;
     font-weight: normal;
     text-transform: uppercase;
 }
 
-section.our-story .column {
+.our-story .column {
     display: flex;
     flex-direction: column;
 }
 
-section.our-story img {
+.our-story img {
     align-self: center;
     width: 87%;
     margin: 15px 0;
@@ -261,20 +262,20 @@ section.our-story img {
     border-radius: 5px;
 }
 
-section.our-story img.tablet {
+.our-story img.tablet {
     display: none;
 }
 
-section.lists {
+.lists {
     align-items: flex-start;
     font-size: large;
 }
 
-section.lists ul {
+.lists ul {
     margin-left: 60px;
 }
 
-section.lists ul li:first-child {
+.lists ul li:first-child {
     padding: 0;
     padding-bottom: 10px;
     text-decoration: underline;
@@ -282,208 +283,208 @@ section.lists ul li:first-child {
     list-style: none;
 }
 
-section.lists .sub-list{
+.lists .sub-list{
     margin-left: 25px;
     padding-bottom: 5px;
     list-style-type: disc;
 }
 
 @media screen and (min-width: 480px) {
-    main section.main {
+    main .main {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    section.main div.text {
+    .main div.text {
         display: flex;
         flex-direction: column;
         width: 45%;
     }
 
-    section.main img {
+    .main img {
         align-self: stretch;
         width: 40%;
         margin-bottom: 0;
         object-fit: cover;
     }
 
-    section.main h2 {
+    .main h2 {
         font-size: 18px;
         text-align: left;
     }
 
-    section.main h1,
-    section.main p {
+    .main h1,
+    .main p {
         text-align: left;
     }
 
-    section.main .button1 {
+    .main .button1 {
         align-self: flex-start;
     }
 
-    section.main a.mobile {
+    .main a.mobile {
         display: none;
     }
 
-    section.main a.tablet {
+    .main a.tablet {
         display: block;
     }
     
-    section.services p {
+    .services p {
         font-size: 12px;
     }
 
-    section.services img {
+    .services img {
         width: 28%;
 
     } 
     
-    section.services .column {
+    .services .column {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
     }
 
-    section.services .column article {
+    .services .column article {
         width: 45%;
     }
 
-    section.services article:nth-child(even) {
+    .services article:nth-child(even) {
         flex-direction: row;
     }
 
-    section.services article:nth-child(even) img{
+    .services article:nth-child(even) img{
         margin-left: 0;
         margin-right: 15px;
     }
 
-    section.whytr img {
+    .whytr img {
         display: block;
         width: 40%;
         border: #373867 1px solid;
         border-radius: 5px;
     }
 
-    section.whytr a.tablet {
+    .whytr a.tablet {
         display: block;
     }
 
-    section.whytr a.mobile {
+    .whytr a.mobile {
         display: none;
     }
 
-    section.whytr article {
+    .whytr article {
         flex-direction: row-reverse;
     }
 
-    section.whytr .button2 {
+    .whytr .button2 {
         align-self: flex-end;
         width: fit-content;
         margin-bottom: 0;
         margin-right: 20px;
     }
 
-    section.whytr div.text {
+    .whytr div.text {
         display: flex;
         flex-direction: column;
     }
 
-    section.whytr div.text p {
+    .whytr div.text p {
         margin-left: 5px;
         font-size: 18px;
     }
 
-    section.system-info form {
+    .system-info form {
         width: 75%;
         margin: auto;
     }
 
-    section.system-info .button3 {
+    .system-info .button3 {
         padding: 0 50px;
     }
 
-    section.our-story img.tablet,
-    section.our-story img.mobile {
+    .our-story img.tablet,
+    .our-story img.mobile {
         display: block;
         width: 25%;
     }
 
-    section.our-story .column {
+    .our-story .column {
         flex-direction: row;
     }
 
-    section.our-story article:nth-child(2) .text {
+    .our-story article:nth-child(2) .text {
         margin-right: 15px;
     }
 
-    section.our-story article:nth-child(3) {
+    .our-story article:nth-child(3) {
         flex-direction: row-reverse;
         text-align: right;
     }
 
-    section.our-story article:nth-child(3) .text {
+    .our-story article:nth-child(3) .text {
         margin-left: 15px;
     }
 
-    section.block.lists {
+    .block.lists {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    section.lists ul {
+    .lists ul {
         width: 30%;
         margin-left: 0;
     }
 }
 
 @media screen and (min-width: 768px) {
-    section.main div.text {
+    .main div.text {
         width: 54%;
     }
 
-    section.services p {
+    .services p {
         font-size: 17px;
     }
 
-    section.services .column article {
+    .services .column article {
         width: 48%;
     }
 
-    section.whytr article {
+    .whytr article {
         width: 80%;
         margin: auto;
         padding-top: 10px;
     }
 
-    section.system-info form {
+    .system-info form {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
     }
 
-    section.system-info .fieldset-section {
+    .system-info .fieldset-section {
         width: 45%;
     }
 
-    section.system-info .contact-area {
+    .system-info .contact-area {
         margin-top: 50px;
     }   
     
-    section.our-story h3 {
+    .our-story h3 {
         font-size: 20px;
     }
 
-    section.our-story p {
+    .our-story p {
         font-size: 20px;
     }
 
-    section.block.lists {
+    .block.lists {
         justify-content: center;
     }
 
-    section.lists ul{
+    .lists ul{
         width: 25%;
     }
 }
@@ -501,58 +502,59 @@ section.lists .sub-list{
         margin: 0 20px;
     }
 
-    main section.block {
+    .block {
         padding: 50px 20px;
     }
 
-    section.main h1 {
+    .main h1 {
         font-size: 46px;
     }
-    section.main div.text {
+    .main div.text {
         justify-content: space-between;
         width: 55%;
     }
 
-    section.main div.text p {
+    .main div.text p {
         width: 55%;
         margin: 60px 0;
     }
 
-    section.main img {
+    .main img {
         width: 40%;
         object-fit: contain;
         align-self: center;
     }
 
-    section.main .button1 {
+    .main .button1 {
         align-self: flex-end;
     }
 
-    section.services .column {
+    .services .column {
         margin-bottom: 50px;
     }
 
-    section.services .column:last-of-type {
+    .services .column:last-of-type {
         margin-bottom: 0;
     }
 
-    section.whytr {
+    .whytr {
         flex-direction: column;
         overflow: auto;
         overflow-y: hidden;
         white-space: nowrap;
     }
 
-    section.whytr h2 {
+    .whytr h2 {
         position: sticky;
         left: 0;
     }
-    section.whytr .articles {
+
+    .whytr .articles {
         display: flex;
         flex-direction: row;
     }
 
-    section.whytr article {
+    .whytr article {
         flex-direction: column;
         flex-shrink: 0;
         width: 38%;
@@ -561,77 +563,77 @@ section.lists .sub-list{
         border-bottom: none;
     }
 
-    section.whytr article img {
+    .whytr article img {
         width: 100%;
     }
 
-    section.whytr article div.text {
+    .whytr article div.text {
         white-space: normal;
     }
 
-    section.whytr article .button2 {
+    .whytr article .button2 {
         align-self: center;
         margin-top: 10px;
     }
 
-    section.system-info form {
+    .system-info form {
         justify-content: flex-start;
     }
 
-    section.system-info .fieldset-section {
+    .system-info .fieldset-section {
         width: 50%;
     }
 
-    section.system-info input[type=text],
-    section.system-info input[type=email] {
+    .system-info input[type=text],
+    .system-info input[type=email] {
         width: 70%;
         height: 30px;
         margin-bottom: 10px;
     }
 
-    section.system-info .contact-area {
+    .system-info .contact-area {
         margin-top: 10px;
     }
 
-    section.system-info textarea {
+    .system-info textarea {
         height: 90px;
     }
 
-    section.system-info .buttons input {
+    .system-info .buttons input {
         margin-top: 35px;
         padding: 0 30px;
     }
     
-    section.our-story article {
+    .our-story article {
         justify-content: space-between;
     }
 
-    section.our-story p {
+    .our-story p {
         font-size: 22px;
     }
     
-    section.our-story article:nth-child(2) .text {
+    .our-story article:nth-child(2) .text {
         width: 65%;
     }
 
-    section.our-story article:nth-child(3) {
+    .our-story article:nth-child(3) {
         flex-direction: row;
         text-align: left;
     }
 
-    section.our-story article:nth-child(3) .text {
+    .our-story article:nth-child(3) .text {
         margin: 0;
     }
 
-    section.our-story img.mobile {
+    .our-story img.mobile {
         width: 30%;
     }
 
-    section.our-story img.tablet {
+    .our-story img.tablet {
         display: none;
     }
 
-    section.block.lists {
+    .block.lists {
         justify-content: space-between;
     }
 }

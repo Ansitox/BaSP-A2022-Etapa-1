@@ -1,4 +1,4 @@
-aside {
+aside.container {
     display: none;
     background-color: #DFE4DE;
     font-size: 20px;
@@ -14,50 +14,50 @@ aside h2 {
     margin-bottom: 30px;
 }
 
-aside .section {
+.section {
     width: 80%;
     margin: auto;
     padding-top: 20px;
     margin-bottom: 20px;
 }
 
-aside .section.nav {
+.section.nav {
     margin-bottom: 40px;
 }
 
-aside .current {
+.current {
     text-decoration: underline;
 }
 
-aside ul li{
+.list li{
     margin-bottom: 30px;
 }
 
-aside .section.get-in-touch p.text {
+.section.get-in-touch p.text {
     font-size: 12px;
     margin-bottom: 30px;
 }
 
-aside .contact-data {
+.contact-data {
     font-size: 12px;
     display: flex;
     align-items: center;
     padding-bottom: 20px;
 }
 
-aside .contact-data img{
+.contact-data img{
     width: 10%;
     height: auto;
     margin-right: 15px;
 }
 
-aside .contact-data p {
+.contact-data p {
     font-size: 12px;
     margin-bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
-    aside {
+    aside.container {
         display: block;
         width: 20%;
         height: fit-content;

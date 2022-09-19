@@ -10,15 +10,15 @@ header.container {
     border-radius: 0 0 15px 15px;
 }
 
-header div.logos {
+.logos {
     display: none;
 }
 
-header img.tablet {
+img.tablet {
     display: none;
 }
 
-header .button {
+.button {
     width: 25px;
     margin: auto;
     margin-bottom: 5px;
@@ -29,14 +29,14 @@ header .button {
         flex-direction: row;
     }
 
-    header div.logos {
+    .logos {
         display: flex;
         justify-content: space-between;
         width: 28%;
         margin-right: 15px;
     }
 
-    header div.logos a {
+    .logos a {
         display: flex;
         justify-content: center;
         width: 22%;
@@ -44,12 +44,12 @@ header .button {
         border-radius: 50px;
     }
     
-    header div.logos img {
+    .logos img {
         width: 100%;
         border-radius: 50px;
     }
 
-    header img.mobile {
+    img.mobile {
         display: none;
     }
     
@@ -66,11 +66,11 @@ header .button {
         max-height: 95px;
     }
 
-    header img.desktop {
+    img.desktop {
         max-height: 84px;
     }
 
-    header .button {
+    .button {
         display: none;
     }
 
@@ -84,7 +84,7 @@ header .button {
         display: none;
     }
 
-    header div.logos {
+    div.logos {
         width: 15%;
     }
 }

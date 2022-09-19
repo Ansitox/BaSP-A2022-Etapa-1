@@ -51,27 +51,27 @@ function additionFunction2 (p3 , p4) {
         return console.log(NaN);
     } else {
         if ( validateInteger(p3) == false ) {
-            alert('There ir a decimal input')
+            alert('There ir a decimal input');
             if ( validateInteger(p4) == false ) {
-                return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + Math.round(p4)))
+                return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + Math.round(p4)));
             } else {
-                return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + p4))
+                return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + p4));
             }
         } else {
             if (validateInteger(p4) == false) {
-                alert('There ir a decimal input')
-                return console.log('Decimal rounded. The result is: ' + (Math.round(p4) + p3))
+                alert('There ir a decimal input');
+                return console.log('Decimal rounded. The result is: ' + (Math.round(p4) + p3));
             } else {
-                return console.log('The result is: ' + (p3 + p4))
+                return console.log('The result is: ' + (p3 + p4));
             }
         }
     }
 };
 
-additionFunction2(8.3 , 5)
-additionFunction2(8 , 5.4)
-additionFunction2(8.3 , 5.4)
-additionFunction2(8 , 5)
+additionFunction2(8.3 , 5);
+additionFunction2(8 , 5.4);
+additionFunction2(8.3 , 5.4);
+additionFunction2(8 , 5);
 
 /* e- Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma probando que todo siga funcionando igual. */
 
@@ -79,27 +79,27 @@ console.log('-----Excercise 06-e:-----');
 
 function validationInteger2 (p3 , p4) {
     if ( validateInteger(p3) == false ) {
-        alert('There ir a decimal input')
+        alert('There ir a decimal input');
         if ( validateInteger(p4) == false ) {
-            return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + Math.round(p4)))
+            return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + Math.round(p4)));
         } else {
-            return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + p4))
+            return console.log('Decimal rounded. The result is: ' + (Math.round(p3) + p4));
         }
     } else {
         if (validateInteger(p4) == false) {
-            alert('There ir a decimal input')
-            return console.log('Decimal rounded. The result is: ' + (Math.round(p4) + p3))
+            alert('There ir a decimal input');
+            return console.log('Decimal rounded. The result is: ' + (Math.round(p4) + p3));
         } else {
-            return console. log('The result is: ' + (p3 + p4))
+            return console. log('The result is: ' + (p3 + p4));
         }
     }
-}
+};
 
 function additionFunction3 (p1, p2) {
     validationInteger2 (p1,p2);
-}
+};
 
-additionFunction3 (3.4 , 5)
-additionFunction3 (3 , 5.7)
-additionFunction3 (3.4 , 5.7)
-additionFunction3 (3 , 5)
+additionFunction3 (3.4 , 5);
+additionFunction3 (3 , 5.7);
+additionFunction3 (3.4 , 5.7);
+additionFunction3 (3 , 5);
