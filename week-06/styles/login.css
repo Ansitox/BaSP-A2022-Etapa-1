@@ -1,0 +1,84 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 50px auto;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 3px 10px 1px;
+}
+
+.login h2 {
+    margin: auto;
+    padding: 20px 0;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.login-img {
+    width: 30px;
+}
+
+.login .input {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: #373867 1px solid; 
+    align-items: flex-end;
+}
+
+.input input[type="password"],
+.input input[type="text"]  {
+    width: 100%;
+    height: 30px;
+    margin-left: 20px;
+    border: none;
+}
+
+.login .input.checkbox {
+    border: none;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: #373867 1px solid;
+    border-radius: 5px;
+    
+}
+
+.input label {
+    margin-left: 20px;
+}
+
+.login button {
+    width: 85%;
+    margin: auto;
+    padding: 5px 0;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.login a {
+    align-self: center;
+    margin: 20px;
+    border-bottom: #373867 1px solid;
+}
+
+.validation-msg {
+    width: 85%;
+    height: 30px;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    color: #F33413;
+    font-weight: bold;
+}
