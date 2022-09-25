@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 85%;
     margin: 50px auto;
-    border: none;
     border-radius: 2px;
     box-shadow: 0 3px 10px 1px;
 }
@@ -16,7 +15,7 @@
     font-weight: normal;
 }
 
-.signup>div {
+.input-container>div {
     display: flex;
     width: 85%;
     flex-direction: column;
@@ -36,10 +35,55 @@
     border-radius: 4px;
 }
 
+.signup button {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
 .validation-msg {
+    width: 100%;
+    margin: auto;
     height: 30px;
     align-items: center;
-    padding: 10px;
     color: #F33413;
     font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .signup {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .not-header-r {
+        width: 59%;
+    }
+
+    .signup .input-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .signup {
+        width: 85%;
+    }
+    .signup .input {
+        width: 45%;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .signup button {
+        width: 60%;
+        margin-bottom: 20px;
+    }
 }

@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 85%;
     margin: 50px auto;
-    border: none;
     border-radius: 2px;
     box-shadow: 0 3px 10px 1px;
 }
@@ -81,4 +80,10 @@
     padding: 10px;
     color: #F33413;
     font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .not-header-r {
+        width: 59%;
+    }
 }

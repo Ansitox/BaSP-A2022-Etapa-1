@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/employee-signup.css">
+    <script src="../javascript/employee-signup.js"></script>
 </head>
 <body>
     <header class="container">
@@ -74,69 +75,72 @@
         </aside>
         <div class="not-header-r">
             <main>
-                <fieldset class="signup">
+                <form class="signup">
                     <h2>Register</h2>
-                    <div>
-                        <label for="first-name">First name</label>
-                        <input type="text" name="" id="first-name">
-                        <div class="validation-msg">asfasf</div>
+                    <div class="input-container">
+                        <div class="input">
+                            <label for="first-name">First name</label>
+                            <input type="text" name="" id="first-name">
+                            <div class="validation-msg" id="firstName-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="last-name">Last name</label>
+                            <input type="text" name="" id="last-name">
+                            <div class="validation-msg"  id="lastName-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="dni">DNI</label>
+                            <input type="text" name="" id="dni">
+                            <div class="validation-msg" id="dni-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="birth-date">Birth date</label>
+                            <input type="date" name="" id="birth-date">
+                            <div class="validation-msg" id="birthDate-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="phone-number">Phone number</label>
+                            <input type="text" name="" id="phone">
+                            <div class="validation-msg" id="phone-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="address">Address</label>
+                            <input type="text" name="" id="address">
+                            <div class="validation-msg"  id="address-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="location">Location</label>
+                            <input type="text" name="" id="location">
+                            <div class="validation-msg" id="location-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="postal-code">Postal code</label>
+                            <input type="text" name="" id="postal-code">
+                            <div class="validation-msg"  id="postalCode-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="text" name="" id="email">
+                            <div class="validation-msg"  id="email-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="repeat-email">Repeat email</label>
+                            <input type="text" name="" id="repeat-email">
+                            <div class="validation-msg" id="repeatEmail-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <input type="password" name="" id="password">
+                            <div class="validation-msg" id="password-error"></div>
+                        </div>
+                        <div class="input">
+                            <label for="repeat-password">Repeat Password</label>
+                            <input type="password" name="" id="repeat-password">
+                            <div class="validation-msg" id="repeatPassword-error"></div>
+                        </div>
                     </div>
-                    <div>
-                        <label for="last-name">Last name</label>
-                        <input type="text" name="" id="last-name">
-                        <div class="validation-msg"></div>
-                    <div>
-                    </div>
-                        <label for="dni">DNI</label>
-                        <input type="text" name="" id="dni">
-                        <div class="validation-msg"></div>
-                    </div>
-                    <div>
-                        <label for="birth-date">Birth date</label>
-                        <input type="date" name="" id="birth-date">
-                        <div class="validation-msg"></div>
-                    <div>
-                    </div>
-                        <label for="phone-number">Phone number</label>
-                        <input type="text" name="" id="phone-number">
-                        <div class="validation-msg"></div>
-                    </div>
-                    <div>
-                        <label for="adress">Adress</label>
-                        <input type="text" name="" id="adress">
-                        <div class="validation-msg"></div>
-                    <div>
-                    </div>
-                        <label for="location">Location</label>
-                        <input type="text" name="" id="location">
-                        <div class="validation-msg"></div>
-                    </div>
-                    <div>
-                        <label for="postal-code">Postal code</label>
-                        <input type="text" name="" id="postal-code">
-                        <div class="validation-msg"></div>
-                    <div>
-                    </div>
-                        <label for="email">Email</label>
-                        <input type="text" name="" id="email">
-                        <div class="validation-msg"></div>
-                    </div>
-                    <div>
-                        <label for="repeat-email">Repeat email</label>
-                        <input type="text" name="" id="repeat-email">
-                        <div class="validation-msg"></div>
-                    <div>
-                    </div>
-                        <label for="password">Password</label>
-                        <input type="password" name="" id="password">
-                        <div class="validation-msg"></div>
-                    </div>
-                    <div>
-                        <label for="repeat-password">Repeat Password</label>
-                        <input type="password" name="" id="repeat-password">
-                        <div class="validation-msg"></div>
-                    <div>
-                </fieldset>
+                    <button id="signup-btn">Continue</button>
+                </form>
             </main>
         </div>
     </div>
