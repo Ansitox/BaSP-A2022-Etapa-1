@@ -6,8 +6,8 @@ console.log('-----Exercise 03: ARRAYS.-----');
 
 console.log('-----Excercise 03-a:-----');
 
-var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
 console.log('5th month: ' + months[4]);
 console.log('11th month: ' + months[10]);
@@ -43,10 +43,18 @@ console.log('-----Excercise 03-e:-----');
 
 console.log('Inverted array: ' + months.reverse());
 
-/* f- Unir todos los elementos del array en un único string donde 
+/* g- Unir todos los elementos del array en un único string donde 
     cada mes este separado por un guión - (utilizar join). */
 
-console.log('-----Excercise 03-f:-----');
+console.log('-----Excercise 03-g:-----');
+
+var monthsString = months.join('-')
+
+console.log(monthsString);
+
+/* f- Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice). */
+
+    console.log('-----Excercise 03-f:-----');
 
 var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]

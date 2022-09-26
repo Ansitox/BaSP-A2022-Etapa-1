@@ -18,7 +18,7 @@ console.log('-----Excercise 05-b:-----');
 
 for (var i = 0 ; i < array.length ; i++) {
     array[i] = array[i].substring(0 , 1).toUpperCase() + 
-    array[i].substring(1 , (array[i]).length).toLocaleLowerCase();
+        array[i].substring(1 , array[i].length).toLocaleLowerCase();
     alert(array[i]);
 };
 
@@ -30,9 +30,7 @@ console.log('-----Excercise 05-c:-----');
 
 var sentence = '';
 for (var i = 0 ; i < array.length ; i++) {
-    sentence = sentence + array[i] + ' ';
-    console.log(sentence);
-    //ver si lo puedo dejar
+    sentence = sentence + array[i];
 };
 
 alert(sentence);

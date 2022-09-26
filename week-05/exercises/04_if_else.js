@@ -8,8 +8,6 @@ console.log('-----Excercise 04-a:-----');
 
 var randomNumber = Math.random();
 
-console.log('Random number: ' + randomNumber);
-
 if (randomNumber >= 0.5) {
     alert('Greater than 0,5');
 } else {
@@ -29,30 +27,19 @@ if (randomNumber >= 0.5) {
 console.log('-----Excercise 04-b:-----');
 
 var randomAge = Math.round(100*Math.random());
-console.log('Random age: ' + randomAge);
 
 if (randomAge < 2) {
     alert('Bebé');
-} else {
-    if (randomAge >= 2 , randomAge < 12) {
+} else if (randomAge >= 2 , randomAge < 12) {
         alert('Niño');
-    } else {
-        if (randomAge >= 12 , randomAge < 19) {
+    } else if (randomAge >= 13 , randomAge < 19) {
             alert('Adolescente');
-        } else {
-            if (randomAge >= 19 , randomAge < 30) {
+        } else if (randomAge >= 20 , randomAge < 30) {
                 alert('Joven');
-            } else {
-                if (randomAge >= 30, randomAge < 60) {
+            } else if (randomAge >= 31, randomAge < 60) {
                     alert('Adulto');
-                } else {
-                    if (randomAge >= 60, randomAge < 75) {
+                } else if (randomAge >= 61, randomAge < 75) {
                         alert('Adulto mayor')
                     } else {
                         alert('Anciano');
                     };
-                };
-            };
-        };
-    };
-};
