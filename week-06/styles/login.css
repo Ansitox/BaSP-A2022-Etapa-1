@@ -21,11 +21,18 @@
 
 .login .input {
     display: flex;
+    align-items: flex-end;
     width: 85%;
     margin: auto;
     padding: 10px 0;
-    border-bottom: #373867 1px solid; 
-    align-items: flex-end;
+}
+
+.default-border {
+    border-bottom: #373867 2px solid; 
+}
+
+.green-border {
+    border-bottom: #49A37B 2px solid; 
 }
 
 .input input[type="password"],
@@ -37,10 +44,10 @@
 }
 
 .login .input.checkbox {
-    border: none;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
+    border: none;
 }
 
 .input input[type="checkbox"] {
@@ -73,10 +80,10 @@
 }
 
 .validation-msg {
+    align-items: center;
     width: 85%;
     height: 30px;
     margin: auto;
-    align-items: center;
     padding: 10px;
     color: #F33413;
     font-weight: bold;
