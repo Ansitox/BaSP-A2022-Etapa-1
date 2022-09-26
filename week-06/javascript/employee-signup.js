@@ -23,15 +23,17 @@ window.onload = function () {
     var passwordErrorBox = document.getElementById('password-error');
     var repeatPassword = document.getElementById('repeat-password');
     var repeatPasswordErrorBox = document.getElementById('repeatPassword-error');
+    var signupButton = document.getElementById('signup-btn');
+
+    var required = 'This field is required'
 
     var signupButton = document.getElementById('signup-btn');
 
     //FIRST NAME VALIDATION
     firstName.onblur = function validateFirstName() {
         var firstNameV = firstName.value;
-        
         if (firstNameV.length == 0) {
-            firstNameErrorBox.innerHTML = 'First name is required';
+            firstNameErrorBox.innerHTML = required;
             return false;
         } 
         if (!firstNameV.match(/^[A-Za-zÁÉÍÓÚáéíóú]*$/)) {
@@ -56,9 +58,8 @@ window.onload = function () {
     //LAST NAME VALIDATION
     lastName.onblur = function validateLastName() {
         var lastNameV = lastName.value;
-        
         if (lastNameV.length == 0) {
-            lastNameErrorBox.innerHTML = 'Last name is required';
+            lastNameErrorBox.innerHTML = required;
             return false;
         } 
         if (!lastNameV.match(/^[A-Za-zÁÉÍÓÚáéíóú]*$/)) {
@@ -81,11 +82,10 @@ window.onload = function () {
     }
 
     //DNI VALIDATION
-    dni.onblur = function validateDni() {
+    dni.onblur = function validateDni() {        
         var dniV = dni.value;
-        
         if (dniV.length == 0) {
-            dniErrorBox.innerHTML = 'DNI is required';
+            dniErrorBox.innerHTML = required;
             return false;
         } 
         if (!dniV.match(/^[0-9]*$/)) {
@@ -104,21 +104,9 @@ window.onload = function () {
     }
 
     /* //BIRTH DATE VALIDATION
-    birthDate.onblur = function validateBirthDate() {
+    birthDate.onblur = function validateBirthDate() {        
         var birthDateV = birthDate.value;
         
-        if (birthDate.required) {
-            birthDate.innerHTML = 'Birth date is required';
-            return false;
-        } 
-        if (!dniV.match(/^[0-9]*$/)) {
-            dniErrorBox.innerHTML = 'Must have only numbers';
-            return false;
-        }
-        if (dniV.length < 8) {
-            dniErrorBox.innerHTML = 'Must have at least 8 characters'
-            return false;
-        }
         return true;
     }
 
@@ -127,11 +115,10 @@ window.onload = function () {
     } */
 
     //PHONE NUMBER VALIDATION
-    phoneNumber.onblur = function validatePhoneNumber() {
+    phoneNumber.onblur = function validatePhoneNumber() {        
         var phoneNumberV = phoneNumber.value;
-        
         if (phoneNumberV.length == 0) {
-            phoneNumberErrorBox.innerHTML = 'Phone number is required';
+            phoneNumberErrorBox.innerHTML = required;
             return false;
         } 
         if (!phoneNumberV.match(/^[0-9]*$/)) {
@@ -149,20 +136,30 @@ window.onload = function () {
         phoneNumberErrorBox.innerHTML = '';
     }
 
-    //LOCATION VALIDATION
-    location.onblur = function validateLocation() {
-        var locationV = location.value;
+    /* //ADRESS DATE VALIDATION
+    address.onblur = function validateAdress() {        
+        var addressV = birthDate.value;
         
+        return true;
+    }
+
+    address.onfocus = function() {
+        adressErrorBox.innerHTML = '';
+    } */
+
+    //LOCATION VALIDATION
+    location.onblur = function validateLocation() {        
+        var locationV = location.value;
         if (locationV.length == 0) {
-            locationErrorBox.innerHTML = 'Location is required';
+            locationErrorBox.innerHTML = required;
             return false;
         } 
         if (!locationV.match(/^[A-Za-zÁÉÍÓÚáéíóú]*$/)) {
             locationErrorBox.innerHTML = 'Must have only letters';
             return false;
         }
-        if (location.length < 4) {
-            locationErrorBox.innerHTML = 'Must have 10 characters'
+        if (locationV.length < 4) {
+            locationErrorBox.innerHTML = 'Must have at least four characters'
             return false;
         }
         return true;
@@ -173,11 +170,10 @@ window.onload = function () {
     }
 
     //POSTAL CODE VALIDATION
-    postalCode.onblur = function validateLocation() {
+    postalCode.onblur = function validateLocation() {        
         var postalCodeV = postalCode.value;
-        
         if (postalCodeV.length == 0) {
-            postalCodeErrorBox.innerHTML = 'Postal code is required';
+            postalCodeErrorBox.innerHTML = required;
             return false;
         } 
         if (!postalCodeV.match(/^[0-9]*$/)) {
@@ -201,9 +197,8 @@ window.onload = function () {
     //EMAIL VALIDATION
     email.onblur = function validateEmail() {
         var emailV = email.value;
-        
         if (emailV.length == 0) {
-            emailErrorBox.innerHTML = 'Email is required';
+            emailErrorBox.innerHTML = required;
             return false;
         } 
         if (!emailV.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
@@ -218,12 +213,11 @@ window.onload = function () {
     }
 
     //REPEAT EMAIL VALIDATION
-    repeatEmail.onblur = function validateRepeatEmail() {
+    repeatEmail.onblur = function validateRepeatEmail() {        
         var emailV = email.value;
         var repeatEmailV = repeatEmail.value;
-        
         if (repeatEmailV.length == 0) {
-            repeatEmailErrorBox.innerHTML = 'This field is required';
+            repeatEmailErrorBox.innerHTML = required;
             return false;
         } 
         if (repeatEmailV !== emailV) {
@@ -238,11 +232,10 @@ window.onload = function () {
     }
 
     //PASSWORD VALIDATION
-    password.onblur = function validatePassword() {
+    password.onblur = function validatePassword() {        
         var passwordV = password.value;
-        
         if (passwordV.length == 0) {
-            passwordErrorBox.innerHTML = 'This field is required';
+            passwordErrorBox.innerHTML = required;
             return false;
         } 
         if (!passwordV.match(/^[A-Za-z0-9]+$/)) {
@@ -272,7 +265,6 @@ window.onload = function () {
     repeatPassword.onblur = function validateRepeatPassword() {
         var passwordV = password.value;
         var repeatPasswordV = repeatPassword.value;
-        
         if (repeatPasswordV.length == 0) {
             repeatPasswordErrorBox.innerHTML = 'This field is required';
             return false;
@@ -287,4 +279,88 @@ window.onload = function () {
     repeatPassword.onfocus = function() {
         repeatPasswordErrorBox.innerHTML = '';
     }
+    
+    // SIGNUP BUTTON
+    signupButton.onclick = function(e) {
+        e.preventDefault();
+        var labelArray = document.getElementsByTagName('label');
+        
+        var msgStarters = [];
+        for (i = 0 ; i < labelArray.length ; i++) {
+            if (labelArray[i]) {
+                msgStarters.push(labelArray[i].innerHTML + ': ');
+            }
+        }
+
+        var fields = []
+        fields.push(firstName.onblur());
+        fields.push(lastName.onblur());
+        fields.push(dni.onblur());
+        //fields.push(birthDate.onblur());
+        fields.push(phoneNumber.onblur());
+        //fields.push(address.onblur());
+        fields.push(location.onblur());
+        fields.push(postalCode.onblur());
+        fields.push(email.onblur());
+        fields.push(repeatEmail.onblur());
+        fields.push(password.onblur());
+        fields.push(repeatPassword.onblur());
+
+        var values = [];
+        values.push(firstName.value);
+        values.push(lastName.value);
+        values.push(dni.value);
+        //values.push(birthDate.value);
+        values.push(phoneNumber.value);
+        //values.push(address.value);
+        values.push(location.value);
+        values.push(postalCode.value);
+        values.push(email.value);
+        values.push(repeatEmail.value);
+        values.push(password.value);
+        values.push(repeatPassword.value);
+
+        var allValidated = [];
+        for (i = 0 ; i < values.length ; i++) {
+            allValidated.push(msgStarters[i] + values[i])
+        }
+        console.log(allValidated)
+
+        var errors = [];
+        errors.push(firstNameErrorBox.innerHTML);
+        errors.push(lastNameErrorBox.innerHTML);
+        errors.push(dniErrorBox.innerHTML);
+        //errors.push(birthDateErrorBox.innerHTML);
+        errors.push(phoneNumberErrorBox.innerHTML);
+        //errors.push(addressErrorBox.innerHTML);
+        errors.push(locationErrorBox.innerHTML);
+        errors.push(postalCodeErrorBox.innerHTML);
+        errors.push(emailErrorBox.innerHTML);
+        errors.push(repeatEmailErrorBox.innerHTML);
+        errors.push(passwordErrorBox.innerHTML);
+        errors.push(repeatEmailErrorBox.innerHTML);
+        console.log(errors)
+
+        var invalidFields = [];
+        for (i = 0 ; i < errors.length ; i++) {
+            invalidFields.push(msgStarters[i] + errors[i])
+        }
+        console.log(fields)
+
+        function isTrue(value) {
+            return value === true;
+        }
+        
+        if (fields.every(isTrue)) {
+            alert(allValidated.join("\n"));
+        } else {
+            for (i = 0 ; i < fields.length ; i++) {
+                if (fields[i]) {
+                    invalidFields[i] = msgStarters[i] + 'CORRECT.';
+                }
+            }
+            console.log(invalidFields);
+            alert(invalidFields.join("\n"));
+        }
+    } 
 }
