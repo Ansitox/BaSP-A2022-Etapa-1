@@ -36,11 +36,23 @@
 
 ## Week 05:
 > This week we started to learn Javascript, this week's problem consists on doing some exercises to be familiarized with how to write .js files.
+
 > Besides the exercises we had to fix and correct last week's problem, having in consideration our tutors feedback.
 
->[GitHub Pages: week-04/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-04/)
-
 >[GitHub Pages: week-05/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-05/)
+
+```
+                    Author/s:   Adrián Da Silva
+```
+
+## Week 6:
+> In this week we had to create two new pages from the Trackgenix website, sign up page and log in page, both styled with css. This new pages all having forms that had to be validated. If the're validated then a pop-up message will show all fielset values. If some of the fields are not validated, then error messages have to be displayed.
+
+>[GitHub Pages: week-06/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-06/)
+
+> Also, a requirements document is added to show all fields' validations.
+
+>[Requirements document.](https://drive.google.com/file/d/149r_oR4Uc5tEYECdFZCXv_TcpGY7Z8oE/view?usp=sharing)
 
 ```
                     Author/s:   Adrián Da Silva
