@@ -52,7 +52,7 @@
 
 > Also, a requirements document is added to show all fields' validations.
 
->[Requirements document.](https://drive.google.com/file/d/149r_oR4Uc5tEYECdFZCXv_TcpGY7Z8oE/view?usp=sharing)
+>[Requirements document.](https://drive.google.com/file/d/1bRa4AQ_XI3mf2G3yK967OChVD1ViB6g3/view?usp=sharing)
 
 ```
                     Author/s:   Adrián Da Silva
