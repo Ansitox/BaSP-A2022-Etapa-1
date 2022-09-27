@@ -24,6 +24,31 @@ img.tablet {
     margin-bottom: 5px;
 }
 
+.nav-bar {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    background-color: #DFE4DE;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-bar .list {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.nav-bar .list li {
+    padding: 2px 10px;
+    border: #37386730 1px solid;
+    border-radius: 5px;
+}
+
+.nav-bar .list li:hover {
+    background-color: #37386740;
+}
+
 @media screen and (min-width: 480px) {
     header.container {
         flex-direction: row;
@@ -86,5 +111,9 @@ img.tablet {
 
     div.logos {
         width: 15%;
+    }
+
+    .nav-bar {
+        display: none;
     }
 }

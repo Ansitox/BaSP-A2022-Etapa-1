@@ -24,10 +24,7 @@ window.onload = function () {
     var repeatPassword = document.getElementById('repeat-password');
     var repeatPasswordErrorBox = document.getElementById('repeatPassword-error');
     var signupButton = document.getElementById('signup-btn');
-
     var required = 'This field is required'
-
-    var signupButton = document.getElementById('signup-btn');
 
     //FIRST NAME VALIDATION
     firstName.onblur = function validateFirstName() {
@@ -70,7 +67,6 @@ window.onload = function () {
         firstName.classList.add('green-border');
         return true;
     }
-
     firstName.onfocus = function() {
         firstNameErrorBox.innerHTML = '';
     }
@@ -116,7 +112,6 @@ window.onload = function () {
         lastName.classList.add('green-border');
         return true;
     }
-
     lastName.onfocus = function() {
         lastNameErrorBox.innerHTML = '';
     }
@@ -146,7 +141,6 @@ window.onload = function () {
         dni.classList.add('green-border');
         return true;
     }
-
     dni.onfocus = function() {
         dniErrorBox.innerHTML = '';
     }
@@ -167,6 +161,7 @@ window.onload = function () {
 
         var age = date.substring(6,10) - birthDateV.substring(6,10);
         var mDif = date.substring(3,5) - birthDateV.substring(3,5);
+
         if (birthDateV == '--' || birthDateV.length == 2) {
             birthDateErrorBox.innerHTML = required;
             birthDate.classList.remove('green-border');
@@ -186,7 +181,6 @@ window.onload = function () {
         birthDate.classList.add('green-border');
         return true;
     }
-
     birthDate.onfocus = function() {
         birthDateErrorBox.innerHTML = '';
     }
@@ -216,7 +210,6 @@ window.onload = function () {
         phoneNumber.classList.add('green-border');
         return true;
     }
-
     phoneNumber.onfocus = function() {
         phoneNumberErrorBox.innerHTML = '';
     }
@@ -276,7 +269,6 @@ window.onload = function () {
         address.classList.add('green-border');
         return true;
     }
-
     address.onfocus = function() {
         addressErrorBox.innerHTML = '';
     }
@@ -314,7 +306,6 @@ window.onload = function () {
         location.classList.add('green-border');
         return true;
     }
-
     location.onfocus = function() {
         locationErrorBox.innerHTML = '';
     }
@@ -349,7 +340,6 @@ window.onload = function () {
         postalCode.classList.add('green-border');
         return true;
     }
-
     postalCode.onfocus = function() {
         postalCodeErrorBox.innerHTML = '';
     }
@@ -373,7 +363,6 @@ window.onload = function () {
         email.classList.add('green-border');
         return true;
     }
-
     email.onfocus = function() {
         emailErrorBox.innerHTML = '';
     }
@@ -398,7 +387,6 @@ window.onload = function () {
         repeatEmail.classList.add('green-border');
         return true;
     }
-
     repeatEmail.onfocus = function() {
         repeatEmailErrorBox.innerHTML = '';
     }
@@ -450,7 +438,6 @@ window.onload = function () {
         password.classList.add('green-border');
         return true;
     }
-
     password.onfocus = function() {
         passwordErrorBox.innerHTML = '';
     }
@@ -475,7 +462,6 @@ window.onload = function () {
         repeatPassword.classList.add('green-border');
         return true;
     }
-
     repeatPassword.onfocus = function() {
         repeatPasswordErrorBox.innerHTML = '';
     }
@@ -543,7 +529,6 @@ window.onload = function () {
         for (i = 0 ; i < errors.length ; i++) {
             invalidFields.push(msgStarters[i] + errors[i])
         }
-
         function isTrue(value) {
             return value === true;
         }

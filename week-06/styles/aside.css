@@ -59,10 +59,10 @@ aside h2 {
 @media screen and (min-width: 1024px) {
     aside.container {
         display: block;
+        position: sticky;
+        top: 92px;
         width: 20%;
         height: fit-content;
         margin-left: 20px;
-        position: sticky;
-        top: 95px;
     }
 }
