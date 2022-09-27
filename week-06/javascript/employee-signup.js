@@ -154,21 +154,30 @@ window.onload = function () {
     //BIRTH DATE VALIDATION
     birthDate.onblur = function validateBirthDate() {        
         var birthDateV = birthDate.value;
-        var date = new Date().toISOString().split('T')[0];
-        var age = date.substring(0,4) - birthDateV.substring(0,4);
-        var mDif = date.substring(5,7) - birthDateV.substring(5,7);
+        var bDyyyy = birthDateV.substring(0,4);
+        var bDmm = birthDateV.substring(5,7);
+        var bDdd = birthDateV.substring(8,10);
+        birthDateV = bDdd + '-' + bDmm + '-' + bDyyyy;
         
-        if (birthDateV.length == 0) {
+        var date = new Date().toISOString().split('T')[0];
+        var dyyyy = date.substring(0,4);
+        var dmm = date.substring(5,7);
+        var ddd = date.substring(8,10);
+        date = ddd + '-' + dmm + '-' + dyyyy;
+
+        var age = date.substring(6,10) - birthDateV.substring(6,10);
+        var mDif = date.substring(3,5) - birthDateV.substring(3,5);
+        if (birthDateV == '--' || birthDateV.length == 2) {
             birthDateErrorBox.innerHTML = required;
             birthDate.classList.remove('green-border');
             birthDate.classList.add('default-border');
             return false;
         } 
-        if (mDif < 0 || (mDif === 0 && date.substring(8,9) < birthDateV.substring(8,10))) {
+        if (mDif < 0 || (mDif === 0 && date.substring(0,2) < birthDateV.substring(0,2))) {
             age --;
         } 
         if (age < 18) {
-            birthDateErrorBox.innerHTML = 'You must be 18 yo or more to sign up';
+            birthDateErrorBox.innerHTML = 'You must be 18+ yo to sign up';
             birthDate.classList.remove('green-border');
             birthDate.classList.add('default-border');
             return false;
@@ -258,7 +267,7 @@ window.onload = function () {
             return false;
         }
         if (addressV.length < 5) {
-            addressErrorBox.innerHTML = 'Must have at least five characters';
+            addressErrorBox.innerHTML = 'Must have at least 5 characters';
             address.classList.remove('green-border');
             address.classList.add('default-border');
             return false;
@@ -296,7 +305,7 @@ window.onload = function () {
             return false;
         }
         if (locationV.length < 4) {
-            locationErrorBox.innerHTML = 'Must have at least four characters';
+            locationErrorBox.innerHTML = 'Must have at least 4 characters';
             location.classList.remove('green-border');
             location.classList.add('default-border');
             return false;
@@ -354,7 +363,7 @@ window.onload = function () {
             email.classList.add('default-border');
             return false;
         } 
-        if (!emailV.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        if (!emailV.match(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)) {
             emailErrorBox.innerHTML = 'Invalid email format';
             email.classList.remove('green-border');
             email.classList.add('default-border');

@@ -20,7 +20,7 @@ window.onload = function () {
             inputEmail.classList.add('default-border');
             return false;
         } 
-        if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        if (!email.match(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)) {
             emailErrorBox.innerHTML = 'Invalid email format';
             inputEmail.classList.remove('green-border');
             inputEmail.classList.add('default-border');
@@ -44,19 +44,29 @@ window.onload = function () {
             inputPassword.classList.add('default-border');
             return false;
         }
-        if (!password.match(/^[A-Za-z0-9]+$/)) {
-            passwordErrorBox.innerHTML = 'Must contain only numbers and letters';
-            inputPassword.classList.remove('green-border');
-            inputPassword.classList.add('default-border');
+        var numbers = '0123456789';
+        function hasNumbers(text) {
+            for (i = 0; i< password.length; i++) {
+                if (numbers.indexOf(text.charAt(i),0)!=-1)
+                return true;
+            }
             return false;
-        } 
-        if (password.match(/^[A-Za-z]+$/)) {
+        }
+        if (!hasNumbers(password)) {
             passwordErrorBox.innerHTML = 'Must have numbers';
             inputPassword.classList.remove('green-border');
             inputPassword.classList.add('default-border');
             return false;
-        } 
-        if (password.match(/^[0-9]+$/)) {
+        }
+        var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
+        function hasLetters(text) {
+            for (i = 0; i< password.length; i++) {
+                if (AZaz.indexOf(text.charAt(i),0)!=-1)
+                return true;
+            }
+            return false;
+        }
+        if (!hasLetters(password)) {
             passwordErrorBox.innerHTML = 'Must have letters';
             inputPassword.classList.remove('green-border');
             inputPassword.classList.add('default-border');

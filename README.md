@@ -48,7 +48,7 @@
 ## Week 6:
 > In this week we had to create two new pages from the Trackgenix website, sign up page and log in page, both styled with css. This new pages all having forms that had to be validated. If the're validated then a pop-up message will show all fielset values. If some of the fields are not validated, then error messages have to be displayed.
 
->[GitHub Pages: week-06/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-06/)
+>[GitHub Pages: week-06/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html)
 
 > Also, a requirements document is added to show all fields' validations.
 
