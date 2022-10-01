@@ -37,7 +37,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i< firstNameV.length; i++) {
+            for (i = 0; i < firstNameV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -82,7 +82,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i< lastNameV.length; i++) {
+            for (i = 0; i < lastNameV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -239,7 +239,7 @@ window.onload = function () {
         }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
-            for (i = 0; i< addressV.length; i++) {
+            for (i = 0; i < addressV.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -284,7 +284,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i< locationV.length; i++) {
+            for (i = 0; i < locationV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -402,7 +402,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i< passwordV.length; i++) {
+            for (i = 0; i < passwordV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -416,7 +416,7 @@ window.onload = function () {
         }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
-            for (i = 0; i< passwordV.length; i++) {
+            for (i = 0; i < passwordV.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -509,14 +509,14 @@ window.onload = function () {
             return value === true;
         }
         if (validationEvents.every(isTrue)) {
-            alert(allValidated.join("\n"));
+            alert(allValidated.join('\n'));
         } else {
             for (i = 0 ; i < validationEvents.length ; i++) {
                 if (validationEvents[i]) {
                     invalidFields[i] = msgStarters[i] + 'CORRECT';
                 }
             }
-            alert(invalidFields.join("\n"));
+            alert(invalidFields.join('\n'));
         }
     } 
 }

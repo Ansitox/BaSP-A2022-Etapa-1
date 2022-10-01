@@ -46,7 +46,7 @@ window.onload = function () {
         }
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i< password.length; i++) {
+            for (i = 0; i < password.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -60,7 +60,7 @@ window.onload = function () {
         }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
-            for (i = 0; i< password.length; i++) {
+            for (i = 0; i < password.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -96,14 +96,39 @@ window.onload = function () {
         var allValidated = [
             msgStarters[0] + loginEmail.value ,
             msgStarters[1] + loginPassword.value 
-        ]
+        ];
         var invalidFields = [
             msgStarters[0] + emailErrorBox.innerHTML ,
             msgStarters[1] + passwordErrorBox.innerHTML
-        ]
+        ];
 
         if (validatePassword && validateEmail) {
-            alert(allValidated.join("\n"));
+            alert(allValidated.join('\n'))
+
+            //fecth
+            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email='+ loginEmail.value +'&password='+ loginPassword.value;
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data.success == true) {
+                        var msg = [
+                            'HTTP request succesfull:', 
+                            data.msg
+                        ]
+                        alert(msg.join('\n'))
+                    } else {
+                        var msg = [
+                            'An error has occured:',
+                            data.msg
+                        ]
+                        alert(msg.join('\n'));
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
         }
         if (!validatePassword || !validateEmail) {
             for (i = 0 ; i < fields.length ; i++) {
@@ -111,7 +136,7 @@ window.onload = function () {
                     invalidFields[i] = msgStarters[i] + 'CORRECT';
                 }
             }
-            alert(invalidFields.join("\n"));
+            alert(invalidFields.join('\n'));
         }
     } 
 }
