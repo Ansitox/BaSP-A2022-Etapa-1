@@ -5,15 +5,13 @@ window.onload = function () {
     var loginPassword = document.getElementById('password');
     var passwordErrorBox = document.getElementById('password-error');
     var inputPassword = document.getElementById('input-password');
-
     var required = 'This field is required'
-
     var loginButton = document.getElementById('login-btn');
-    
+
     // EMAIL VALIDATION
     loginEmail.onblur = function validateEmail() {
         var email = loginEmail.value;
-        
+
         if (email.length == 0) {
             emailErrorBox.innerHTML = required;
             inputEmail.classList.remove('green-border');
@@ -37,13 +35,6 @@ window.onload = function () {
     // PASSWORD VALIDATION
     loginPassword.onblur = function validatePassword() {
         var password = loginPassword.value;
-
-        if (password.length == 0) {
-            passwordErrorBox.innerHTML = required;
-            inputPassword.classList.remove('green-border');
-            inputPassword.classList.add('default-border');
-            return false;
-        }
         var numbers = '0123456789';
         function hasNumbers(text) {
             for (i = 0; i < password.length; i++) {
@@ -52,18 +43,25 @@ window.onload = function () {
             }
             return false;
         }
-        if (!hasNumbers(password)) {
-            passwordErrorBox.innerHTML = 'Must have numbers';
-            inputPassword.classList.remove('green-border');
-            inputPassword.classList.add('default-border');
-            return false;
-        }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
             for (i = 0; i < password.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
+            return false;
+        }
+        
+        if (password.length == 0) {
+            passwordErrorBox.innerHTML = required;
+            inputPassword.classList.remove('green-border');
+            inputPassword.classList.add('default-border');
+            return false;
+        }
+        if (!hasNumbers(password)) {
+            passwordErrorBox.innerHTML = 'Must have numbers';
+            inputPassword.classList.remove('green-border');
+            inputPassword.classList.add('default-border');
             return false;
         }
         if (!hasLetters(password)) {
@@ -104,14 +102,13 @@ window.onload = function () {
 
         if (validatePassword && validateEmail) {
             alert(allValidated.join('\n'))
-
-            //fecth
-            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email='+ loginEmail.value +'&password='+ loginPassword.value;
+            var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${loginEmail.value}&password=${loginPassword.value}`;
             fetch(url)
                 .then(function (response) {
                     return response.json();
                 })
                 .then(function (data) {
+                    console.log(data)
                     if (data.success == true) {
                         var msg = [
                             'HTTP request succesfull:', 

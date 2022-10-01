@@ -23,24 +23,53 @@ window.onload = function () {
     var passwordErrorBox = document.getElementById('password-error');
     var repeatPassword = document.getElementById('repeat-password');
     var repeatPasswordErrorBox = document.getElementById('repeatPassword-error');
+    
     var signupButton = document.getElementById('signup-btn');
     var required = 'This field is required'
+    
+    var currentFirstName = localStorage.getItem('firstName');
+    var currentLastName = localStorage.getItem('lastName');
+    var currentDni = localStorage.getItem('dni');
+    var currentBirthDate = localStorage.getItem('birthDate');
+    var currentPhoneNumber = localStorage.getItem('phoneNumber');
+    var currentAddress = localStorage.getItem('address');
+    var currentLocation = localStorage.getItem('location');
+    var currentPostalCode = localStorage.getItem('postalCode');
+    var currentEmail = localStorage.getItem('email');
+    var currentRepeatEmail = localStorage.getItem('repeatEmail');
+    var currentPassword = localStorage.getItem('password');
+    var currentRepeatPassword = localStorage.getItem('RepeatPassword');
 
+    firstName.value = currentFirstName
+    lastName.value = currentLastName
+    dni.value = currentDni
+    birthDate.value = currentBirthDate
+    phoneNumber.value = currentPhoneNumber
+    address.value = currentAddress
+    location.value = currentLocation
+    postalCode.value = currentPostalCode
+    email.value = currentEmail
+    repeatEmail.value = currentRepeatEmail
+    password.value = currentPassword
+    repeatPassword.value = currentRepeatPassword
+    
+    
     //FIRST NAME VALIDATION
     firstName.onblur = function validateFirstName() {
         var firstNameV = firstName.value;
+        var numbers = '0123456789';
+        var AZ = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ'
+        function hasNumbers(text) {
+            for (i = 0; i< firstNameV.length; i++) {
+                if (numbers.indexOf(text.charAt(i),0)!=-1)
+                return true;
+            }
+            return false;
+        }
         if (firstNameV.length == 0) {
             firstNameErrorBox.innerHTML = required;
             firstName.classList.remove('green-border');
             firstName.classList.add('default-border');
-            return false;
-        } 
-        var numbers = '0123456789';
-        function hasNumbers(text) {
-            for (i = 0; i < firstNameV.length; i++) {
-                if (numbers.indexOf(text.charAt(i),0)!=-1)
-                return true;
-            }
             return false;
         }
         if (hasNumbers(firstNameV)) {
@@ -49,12 +78,10 @@ window.onload = function () {
             firstName.classList.add('default-border');
             return false;
         }
-        var AZ = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ'
         if (!(AZ.indexOf(firstNameV.charAt(0),0)!=-1)) {
             firstNameErrorBox.innerHTML = 'Must start with a capital letter';
             firstName.classList.remove('green-border');
             firstName.classList.add('default-border');
-            console.log('a')
             return false;
         }
         if (firstNameV.length < 4) {
@@ -74,32 +101,32 @@ window.onload = function () {
     //LAST NAME VALIDATION
     lastName.onblur = function validateLastName() {
         var lastNameV = lastName.value;
+        var numbers = '0123456789';
+        var AZ = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ'
+
+        function hasNumbers(text) {
+            for (i = 0; i< lastNameV.length; i++) {
+                if (numbers.indexOf(text.charAt(i),0)!=-1)
+                return true;
+            }
+            return false;
+        }
         if (lastNameV.length == 0) {
             lastNameErrorBox.innerHTML = required;
             lastName.classList.remove('green-border');
             lastName.classList.add('default-border');
             return false;
         } 
-        var numbers = '0123456789';
-        function hasNumbers(text) {
-            for (i = 0; i < lastNameV.length; i++) {
-                if (numbers.indexOf(text.charAt(i),0)!=-1)
-                return true;
-            }
-            return false;
-        }
         if (hasNumbers(lastNameV)) {
             lastNameErrorBox.innerHTML = 'Must have only letters';
             lastName.classList.remove('green-border');
             lastName.classList.add('default-border');
             return false;
         }
-        var AZ = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ'
         if (!(AZ.indexOf(lastNameV.charAt(0),0)!=-1)) {
             lastNameErrorBox.innerHTML = 'Must start with a capital letter';
             lastName.classList.remove('green-border');
             lastName.classList.add('default-border');
-            console.log('a')
             return false;
         }
         if (lastNameV.length < 4) {
@@ -117,7 +144,7 @@ window.onload = function () {
     }
 
     //DNI VALIDATION
-    dni.onblur = function validateDni() {        
+    dni.onblur = function validateDni() {
         var dniV = dni.value;
         if (dniV.length == 0) {
             dniErrorBox.innerHTML = required;
@@ -146,8 +173,18 @@ window.onload = function () {
     }
 
     //BIRTH DATE VALIDATION
-    birthDate.onblur = function validateBirthDate() {        
+    birthDate.onblur = function validateBirthDate() {
         var birthDateV = birthDate.value;
+        
+        /* function changeDateFormat(date) {
+            var yyyy = date.substring(0,4);
+            var mm = date.substring(5,7);
+            var dd = date.substring(8,10);
+            date = dd + '-' + mm + '-' + yyyy;
+        }
+        changeDateFormat (birthDateV)
+        console.log(birthDateV) */
+
         var bDyyyy = birthDateV.substring(0,4);
         var bDmm = birthDateV.substring(5,7);
         var bDdd = birthDateV.substring(8,10);
@@ -186,7 +223,7 @@ window.onload = function () {
     }
 
     //PHONE NUMBER VALIDATION
-    phoneNumber.onblur = function validatePhoneNumber() {        
+    phoneNumber.onblur = function validatePhoneNumber() {
         var phoneNumberV = phoneNumber.value;
         if (phoneNumberV.length == 0) {
             phoneNumberErrorBox.innerHTML = required;
@@ -215,7 +252,7 @@ window.onload = function () {
     }
 
     //ADDRESS DATE VALIDATION
-    address.onblur = function validateAdress() {        
+    address.onblur = function validateAdress() {
         var addressV = address.value;
         if (addressV.length == 0) {
             addressErrorBox.innerHTML = required;
@@ -225,7 +262,7 @@ window.onload = function () {
         }
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i < addressV.length; i++) {
+            for (i = 0; i< addressV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -239,7 +276,7 @@ window.onload = function () {
         }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
-            for (i = 0; i < addressV.length; i++) {
+            for (i = 0; i< addressV.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -274,7 +311,7 @@ window.onload = function () {
     }
 
     //LOCATION VALIDATION
-    location.onblur = function validateLocation() {        
+    location.onblur = function validateLocation() {
         var locationV = location.value;
         if (locationV.length == 0) {
             locationErrorBox.innerHTML = required;
@@ -284,7 +321,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i < locationV.length; i++) {
+            for (i = 0; i< locationV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -311,7 +348,7 @@ window.onload = function () {
     }
 
     //POSTAL CODE VALIDATION
-    postalCode.onblur = function validateLocation() {        
+    postalCode.onblur = function validateLocation() {
         var postalCodeV = postalCode.value;
         if (postalCodeV.length == 0) {
             postalCodeErrorBox.innerHTML = required;
@@ -368,7 +405,7 @@ window.onload = function () {
     }
 
     //REPEAT EMAIL VALIDATION
-    repeatEmail.onblur = function validateRepeatEmail() {        
+    repeatEmail.onblur = function validateRepeatEmail() {
         var emailV = email.value;
         var repeatEmailV = repeatEmail.value;
         if (repeatEmailV.length == 0) {
@@ -392,7 +429,7 @@ window.onload = function () {
     }
 
     //PASSWORD VALIDATION
-    password.onblur = function validatePassword() {        
+    password.onblur = function validatePassword() {
         var passwordV = password.value;
         if (passwordV.length == 0) {
             passwordErrorBox.innerHTML = required;
@@ -402,7 +439,7 @@ window.onload = function () {
         } 
         var numbers = '0123456789';
         function hasNumbers(text) {
-            for (i = 0; i < passwordV.length; i++) {
+            for (i = 0; i< passwordV.length; i++) {
                 if (numbers.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -416,7 +453,7 @@ window.onload = function () {
         }
         var AZaz = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
         function hasLetters(text) {
-            for (i = 0; i < passwordV.length; i++) {
+            for (i = 0; i< passwordV.length; i++) {
                 if (AZaz.indexOf(text.charAt(i),0)!=-1)
                 return true;
             }
@@ -451,13 +488,13 @@ window.onload = function () {
             repeatPassword.classList.remove('green-border');
             repeatPassword.classList.add('default-border');
             return false;
-        } 
+        }
         if (repeatPasswordV !== passwordV) {
             repeatPasswordErrorBox.innerHTML = 'Unmatching password ';
             repeatPassword.classList.remove('green-border');
             repeatPassword.classList.add('default-border');
             return false;
-        } 
+        }
         repeatPassword.classList.remove('default-border');
         repeatPassword.classList.add('green-border');
         return true;
@@ -465,58 +502,127 @@ window.onload = function () {
     repeatPassword.onfocus = function() {
         repeatPasswordErrorBox.innerHTML = '';
     }
-    
+
     // SIGNUP BUTTON
     signupButton.onclick = function(e) {
         e.preventDefault();
         var labelArray = document.getElementsByTagName('label');
-        var msgStarters = [];
-        for (i = 0 ; i < labelArray.length ; i++) {
-            if (labelArray[i]) {
-                msgStarters.push(labelArray[i].innerHTML + ': ');
-            }
-        }
-
         var inputs = document.getElementsByTagName('input');
 
-        var validationEvents =[]
-        for (i = 0 ; i < inputs.length ; i++) {
-            validationEvents.push(inputs[i].onblur());
+        var msgStarters = [];
+        for (i = 0 ; i < labelArray.length ; i++) {
+            msgStarters.push(labelArray[i].innerHTML + ': ');
         }
 
-        var values = []
-        for (i = 0 ; i < inputs.length ; i++) {
-            values.push(inputs[i].value);
-        }
+        var fieldOnBlur = []
+        fieldOnBlur.push(firstName.onblur());
+        fieldOnBlur.push(lastName.onblur());
+        fieldOnBlur.push(dni.onblur());
+        fieldOnBlur.push(birthDate.onblur());
+        fieldOnBlur.push(phoneNumber.onblur());
+        fieldOnBlur.push(address.onblur());
+        fieldOnBlur.push(location.onblur());
+        fieldOnBlur.push(postalCode.onblur());
+        fieldOnBlur.push(email.onblur());
+        fieldOnBlur.push(repeatEmail.onblur());
+        fieldOnBlur.push(password.onblur());
+        fieldOnBlur.push(repeatPassword.onblur());
+
+        var values = [];
+        values.push(firstName.value);
+        values.push(lastName.value);
+        values.push(dni.value);
+        values.push(birthDate.value);
+        values.push(phoneNumber.value);
+        values.push(address.value);
+        values.push(location.value);
+        values.push(postalCode.value);
+        values.push(email.value);
+        values.push(repeatEmail.value);
+        values.push(password.value);
+        values.push(repeatPassword.value);
 
         var allValidated = [];
         for (i = 0 ; i < values.length ; i++) {
             allValidated.push(msgStarters[i] + values[i])
         }
 
-        var errorBoxes = document.getElementsByClassName('validation-msg')
         var errors = [];
-        for (i = 0 ; i < errorBoxes.length ; i++) {
-            errors.push(errorBoxes[i].innerHTML)
-        }
+        errors.push(firstNameErrorBox.innerHTML);
+        errors.push(lastNameErrorBox.innerHTML);
+        errors.push(dniErrorBox.innerHTML);
+        errors.push(birthDateErrorBox.innerHTML);
+        errors.push(phoneNumberErrorBox.innerHTML);
+        errors.push(addressErrorBox.innerHTML);
+        errors.push(locationErrorBox.innerHTML);
+        errors.push(postalCodeErrorBox.innerHTML);
+        errors.push(emailErrorBox.innerHTML);
+        errors.push(repeatEmailErrorBox.innerHTML);
+        errors.push(passwordErrorBox.innerHTML);
+        errors.push(repeatPasswordErrorBox.innerHTML);
 
         var invalidFields = [];
         for (i = 0 ; i < errors.length ; i++) {
             invalidFields.push(msgStarters[i] + errors[i])
         }
-        
         function isTrue(value) {
             return value === true;
         }
-        if (validationEvents.every(isTrue)) {
-            alert(allValidated.join('\n'));
+        
+        if (fieldOnBlur.every(isTrue)) {
+            alert(allValidated.join("\n"));
+            var birthDateV = birthDate.value;
+            var bDyyyy = birthDateV.substring(0,4);
+            var bDmm = birthDateV.substring(5,7);
+            var bDdd = birthDateV.substring(8,10);
+            birthDateV = bDmm + '/' + bDdd + '/' + bDyyyy;    
+
+            //fetch
+            var url = [`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birthDateV}&phone=${phoneNumber.value}&address=${address.value}&city=${location.value}&zip=${postalCode.value}&email=${email.value}&repeatEmail=${repeatEmail.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`]
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data.success == true) {
+                        localStorage.setItem('firstName', firstName.value);
+                        localStorage.setItem('lastName', lastName.value);
+                        localStorage.setItem('dni', dni.value);
+                        localStorage.setItem('birthDate', birthDate.value);
+                        localStorage.setItem('phoneNumber', phoneNumber.value);
+                        localStorage.setItem('address', address.value);
+                        localStorage.setItem('location', location.value);
+                        localStorage.setItem('postalCode',postalCode.value);
+                        localStorage.setItem('email',email.value);
+                        localStorage.setItem('repeatEmail',repeatEmail.value);
+                        localStorage.setItem('password',password.value);
+                        localStorage.setItem('repeatPassword',repeatPassword.value);
+
+                        var msg = [
+                            'HTTP request succesfull:',
+                            data.msg
+                        ]
+                        alert(msg.join('\n'))
+                    } else {
+                        var msg = [
+                            'An error has occured:',
+                            console.log(data)
+                        ]
+                        alert(msg.join('\n'));
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+
         } else {
-            for (i = 0 ; i < validationEvents.length ; i++) {
-                if (validationEvents[i]) {
+            for (i = 0 ; i < fieldOnBlur.length ; i++) {
+                if (fieldOnBlur[i]) {
                     invalidFields[i] = msgStarters[i] + 'CORRECT';
                 }
             }
-            alert(invalidFields.join('\n'));
+            alert(invalidFields.join("\n"));
         }
-    } 
+    }
 }
