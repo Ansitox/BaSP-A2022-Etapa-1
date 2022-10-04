@@ -57,3 +57,12 @@
 ```
                     Author/s:   Adrián Da Silva
 ```
+
+## Week 7:
+> This week's task was to extend the forms on the sign up and log in pages, to do that pressing the submit buttons will send a HTTP request to a web server. We used the fetch method from javascript, and the request has to be send only if all the previous validations were confirmed. For the log in page only a given user (rose@radiumrocket.com) is abled to log correctly, giving a succes message, in other cases an error message is shown. For the sign up page all data has to be stored in the local storage, and this data will be charged on the form any time the page loads.
+
+>[GitHub Pages: week-07/](https://ansitox.github.io/BaSP-A2022-Etapa-1/week-07/views/index.html)
+
+```
+                    Author/s:   Adrián Da Silva
+```

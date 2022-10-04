@@ -38,7 +38,7 @@ window.onload = function () {
     var currentEmail = localStorage.getItem('email');
     var currentRepeatEmail = localStorage.getItem('repeatEmail');
     var currentPassword = localStorage.getItem('password');
-    var currentRepeatPassword = localStorage.getItem('RepeatPassword');
+    var currentRepeatPassword = localStorage.getItem('repeatPassword');
 
     firstName.value = currentFirstName
     lastName.value = currentLastName
@@ -175,29 +175,15 @@ window.onload = function () {
     //BIRTH DATE VALIDATION
     birthDate.onblur = function validateBirthDate() {
         var birthDateV = birthDate.value;
-        
-        /* function changeDateFormat(date) {
-            var yyyy = date.substring(0,4);
-            var mm = date.substring(5,7);
-            var dd = date.substring(8,10);
-            date = dd + '-' + mm + '-' + yyyy;
-        }
-        changeDateFormat (birthDateV)
-        console.log(birthDateV) */
-
-        var bDyyyy = birthDateV.substring(0,4);
-        var bDmm = birthDateV.substring(5,7);
-        var bDdd = birthDateV.substring(8,10);
-        birthDateV = bDdd + '-' + bDmm + '-' + bDyyyy;
-        
+        birthDateV = birthDateV.split('-');
+        birthDateV = birthDateV[2] + '-' + birthDateV[1] + '-' + birthDateV[0];
         var date = new Date().toISOString().split('T')[0];
-        var dyyyy = date.substring(0,4);
-        var dmm = date.substring(5,7);
-        var ddd = date.substring(8,10);
-        date = ddd + '-' + dmm + '-' + dyyyy;
-
-        var age = date.substring(6,10) - birthDateV.substring(6,10);
-        var mDif = date.substring(3,5) - birthDateV.substring(3,5);
+        date = date.split('-');
+        date = date[2] + '-' + date[1] + '-' + date[0];
+        birthDateV = birthDateV.split('-');
+        date = date.split('-');
+        var age = date[2] - birthDateV[2];
+        var mDif = date[1] - birthDateV[1];
 
         if (birthDateV == '--' || birthDateV.length == 2) {
             birthDateErrorBox.innerHTML = required;
@@ -205,7 +191,7 @@ window.onload = function () {
             birthDate.classList.add('default-border');
             return false;
         } 
-        if (mDif < 0 || (mDif === 0 && date.substring(0,2) < birthDateV.substring(0,2))) {
+        if (mDif < 0 || (mDif === 0 && date[0] < birthDateV[0])) {
             age --;
         } 
         if (age < 18) {
@@ -507,7 +493,6 @@ window.onload = function () {
     signupButton.onclick = function(e) {
         e.preventDefault();
         var labelArray = document.getElementsByTagName('label');
-        var inputs = document.getElementsByTagName('input');
 
         var msgStarters = [];
         for (i = 0 ; i < labelArray.length ; i++) {
@@ -572,13 +557,14 @@ window.onload = function () {
         if (fieldOnBlur.every(isTrue)) {
             alert(allValidated.join("\n"));
             var birthDateV = birthDate.value;
-            var bDyyyy = birthDateV.substring(0,4);
-            var bDmm = birthDateV.substring(5,7);
-            var bDdd = birthDateV.substring(8,10);
-            birthDateV = bDmm + '/' + bDdd + '/' + bDyyyy;    
+            birthDateV = birthDateV.split('-')
+            birthDateV = birthDateV[1] + '/' + birthDateV[2] + '/' + birthDateV[0];
 
-            //fetch
-            var url = [`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birthDateV}&phone=${phoneNumber.value}&address=${address.value}&city=${location.value}&zip=${postalCode.value}&email=${email.value}&repeatEmail=${repeatEmail.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`]
+            var url =
+                `https://basp-m2022-api-rest-server.herokuapp.com/signup?`+
+                `name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birthDateV}&`+
+                `phone=${phoneNumber.value}&address=${address.value}&city=${location.value}&zip=${postalCode.value}&`+
+                `email=${email.value}&repeatEmail=${repeatEmail.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`;
 
             fetch(url)
                 .then(function (response) {
@@ -602,13 +588,15 @@ window.onload = function () {
                         var msg = [
                             'HTTP request succesfull:',
                             data.msg
-                        ]
-                        alert(msg.join('\n'))
+                        ];
+                        alert(msg.join('\n'));
                     } else {
                         var msg = [
-                            'An error has occured:',
-                            console.log(data)
+                            'Something went wrong:'
                         ]
+                        for (i = 0 ; i < data.errors.length ; i++) {
+                            msg.push(data.errors[i].msg);
+                        }
                         alert(msg.join('\n'));
                     }
                 })
